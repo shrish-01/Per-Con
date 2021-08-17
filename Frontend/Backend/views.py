@@ -1,6 +1,5 @@
-
-from django.http.response import HttpResponseNotAllowed
 from django.shortcuts import render
+from django.http.response import HttpResponseNotAllowed
 from django.http import HttpResponse
 from .models import *
 

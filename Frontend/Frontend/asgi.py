@@ -1,5 +1,5 @@
 """
-ASGI config for mypro project.
+ASGI config for Frontend project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mypro.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Frontend.settings')
 
 application = get_asgi_application()
