@@ -20,10 +20,10 @@ admin.site.site_title = "PERCON Admin Portal"
 admin.site.index_title = "Welcome to PERCON Portal"
 
 urlpatterns = [
-    path('', include('backend.urls')),
-    path('about',include("backend.urls")),
-    path('contact',include("backend.urls")) ,
-    path('services',include("backend.urls")) ,
+    path('', include('Backend.urls')),
+    path('about',include("Backend.urls")),
+    path('contact',include("Backend.urls")) ,
+    path('services',include("Backend.urls")) ,
     path('admin/', admin.site.urls),
     
 ]
