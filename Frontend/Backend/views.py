@@ -3,6 +3,8 @@ from django.http.response import HttpResponseNotAllowed
 from django.http import HttpResponse
 from .models import *
 from datetime import datetime
+from django.contrib import messages
+
 
 def home(request):
     return render(request,"home.html")
@@ -19,6 +21,7 @@ def contact(request) :
     
     contact =Contact(name=name,email=email,phone=phone,desc=desc,date= datetime.today())
     contact.save()
+    messages.success(request, 'Your message has been sent!')
     return render(request,"contact.html")
 def services(request) :
     return render(request,"services.html")
