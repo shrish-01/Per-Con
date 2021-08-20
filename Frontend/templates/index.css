@@ -1,0 +1,191 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: cursive;
+    color: rgb(5, 5, 5);
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 8vw
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 2vw;
+    font-family: cursive;
+    color: blue;
+    font-style: oblique;
+    font-weight: bolder;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 2vw;
+    right: 8vw;
+    columns: black;
+    font-size: 2vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+h4 {
+    position: relative;
+    float: right;
+    padding: 20px;
+    font-size: 20px;
+    margin: auto;
+    color: black;
+}
+
+h2 {
+    font-family: cursive;
+    font-style: italic;
+    font-size: 3vw;
+    color: black;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.navbar {
+    overflow: hidden;
+    text-align: center;
+}
+
+.top-right.h4 {
+    font-size: 3vw;
+}
+
+.last {
+    background-color: rgb(22, 182, 182);
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row>.column {
+    padding: 8px;
+}
+
+.rowlast,
+.rowlast>.column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column,.columnlast {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: rgb(144, 214, 231);
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 375px) {
+    .column ,.columnlast{
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 375px) {
+    .column ,.columnlast{
+        width: 100%;
+    }
+}
+
+.columnlast {
+    float: left;
+    width: 33.33%;
+    height: 40vw;
+    background-color: darkcyan;
+}
+
+.rowlast {
+    margin:5px 3px 5px 5px;
+    padding:5px 3px 5px 5px;
+}
+
+/* Clear floats after the columns */
+.rowlast:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#navimage {
+    opacity: 0.9;
+}
+
+.image {
+    width: 100%;
+    height: 20vw;
+}
+
+.imagelast {
+    height: 10vw;
+    width: 20vw;
+}
+
+.card {
+    padding: 16px;
+    text-align: center;
+}
+
+.readmore{
+    float: right;
+}
