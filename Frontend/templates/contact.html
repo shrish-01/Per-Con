@@ -1,0 +1,78 @@
+{% extends "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            background-color:cyan;
+            border: 7px solid darkblue;
+            border-radius: 10px;
+            padding: 20px 200px 100px 300px;
+            margin: 400px 80px 10px 80px;
+            font-family: cursive;
+            font-size: 20px;
+            width: 50%;
+            text-align: center;
+            
+        }
+
+        #name, #email, #desc, #phone{
+            border-radius: 5px;
+            padding: 10px 180px;
+            margin: 0.001px;
+        }
+
+
+        h1{
+            font-size: 65px;
+        }
+
+        .btn{
+            background-color: blue;
+            padding: 10px;
+            width: 90px;
+            border: 1.2px solid black;
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+            border-radius: 10px;
+            font-family: cursive;
+        }
+
+        .btn:hover{
+            background-color: white;
+            color: black;
+        }
+
+    </style>
+</head>
+<body bgcolor="gray">
+    <div class="img" ><img src="contact.jpg" alt="..." style="height: 400px;width: 1320px;"></div>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="main">
+            <form method="post" action="/contact" >
+             {% csrf_token %} 
+            
+            <h3>Name</h3>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <h3>Contact no.</h3>
+            <input type="text" id="phone" placeholder="Enter your Phone no.">
+
+            <h3>Email</h3>
+            <input type="text" id="email" placeholder="Enter your Email id">
+
+            <h3>Description</h3>
+            <input type="text" id="desc" placeholder="Description"><br><hr>
+
+            <button class="btn" type="submit" >Submit</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
