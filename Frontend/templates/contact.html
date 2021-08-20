@@ -1,36 +1,28 @@
-{% extends "index.html" %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        .container{
-            background-color:cyan;
-            border: 7px solid darkblue;
-            border-radius: 10px;
-            padding: 20px 200px 100px 300px;
-            margin: 400px 80px 10px 80px;
-            font-family: cursive;
-            font-size: 20px;
-            width: 50%;
-            text-align: center;
-            
-        }
 
-        #name, #email, #desc, #phone{
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+        .container1 {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgb(213, 238, 238);
+            background-color: rgb(198, 231, 228);
             border-radius: 5px;
-            padding: 10px 180px;
-            margin: 0.001px;
+
         }
 
-
-        h1{
-            font-size: 65px;
-        }
-
-        .btn{
+        .btn {
             background-color: blue;
             padding: 10px;
             width: 90px;
@@ -42,37 +34,140 @@
             font-family: cursive;
         }
 
-        .btn:hover{
+        .btn:hover {
             background-color: white;
             color: black;
         }
 
+        h1 {
+            font-family: cursive;
+            font-style: oblique;
+            font-size: 300%;
+            text-align: center;
+        }
+
+        .head {
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .box {
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+            font-family: cursive;
+            font-size: 2vw;
+        }
+
+        #fname,#lname,#email,#country,#phone,#sub{
+            width: 300%;
+            height: 150%;
+            margin: 2px 0px 5px 10px;
+        }
+
+        @media screen and (max-width: 300px) {
+  .head, .box, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
     </style>
 </head>
-<body bgcolor="gray">
-    <div class="img" ><img src="contact.jpg" alt="..." style="height: 400px;width: 1320px;"></div>
+
+<body>
     <div class="container">
-        <h1>Contact Us</h1>
-        <div class="main">
-            <form method="post" action="/contact" >
-             {% csrf_token %} 
-            
-            <h3>Name</h3>
-            <input type="text" id="name" placeholder="Enter your name">
-
-            <h3>Contact no.</h3>
-            <input type="text" id="phone" placeholder="Enter your Phone no.">
-
-            <h3>Email</h3>
-            <input type="text" id="email" placeholder="Enter your Email id">
-
-            <h3>Description</h3>
-            <input type="text" id="desc" placeholder="Description"><br><hr>
-
-            <button class="btn" type="submit" >Submit</button>
-
-            </form>
+        <img src="https://this.deakin.edu.au/wp-content/uploads/2016/06/happy-lady-in-field-e1499230188651.jpg"
+            alt="Snow" id="navimage" style="width:100%;">
+        <nav class="navbar">
+            <div class="bottom-left">Bottom Left</div>
+            <img src="">Logo
+            <div class="top-left">Per-Con</div>
+            <div class="top-right">
+                <h4>Log in</h4>
+                <h4>Sign up</h4>
+                <h4><a href="/index.html">Home</a></h4>
+                <h4><a href="/about.html">About us</a></h4>
+                <h4><a href="/cont.html">Contact us</a></h4>
+                <h4><a href="">Servies</a></h4>
+            </div>
+        </nav>
+        <div class="bottom-right">Bottom Right</div>
+        <div class="centered">Per-Con<br>
+            <h2>"Life is a game, play it; Life is a challenge, Meet it; Life is an opportunity, Capture it."</h2>
         </div>
     </div>
+
+    <div class="container1">
+        <h1>Contact Us</h1>
+        <form action="element">
+            <div class="row">
+                <div class="head">
+                    <label for="fname">First name</label>
+                    <div class="box">
+                        <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="head">
+                    <label for="lname">Last name</label>
+                    <div class="box">
+                        <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="head">
+                    <label for="email">E-mail</label>
+                    <div class="box">
+                        <input type="text" id="email" name="email" placeholder="Enter your email id">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="head">
+                    <label for="country">Country</label>
+                    <div class="box">
+                        <select id="country" name="country">
+                            <option value="india">India</option>
+                            <option value="australia">Australia</option>
+                            <option value="america">America</option>
+                            <option value="russia">Russia</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="head">
+                    <label for="phone">Contact no.</label>
+                    <div class="box">
+                        <input type="text" id="phone" name="phone" placeholder="Enter your contact no.">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="head">
+                    <label for="sub">Subject</label>
+                    <div class="box">
+                        <input type="text" id="sub" name="sub" placeholder="Write something">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" class="btn" value="Submit">
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
