@@ -14,15 +14,16 @@ def about(request) :
     
 def contact(request) :
     if request.method == 'POST' :
-     name = request.POST.get('name')
-     email= request.POST.get('email')
-     phone = request.POST.get('phone')
-     desc = request.POST.get('desc')
+      name = request.POST.get('name')
+      email= request.POST.get('email')
+      phone = request.POST.get('phone')
+      desc = request.POST.get('desc')
     
-    contact =Contact(name=name,email=email,phone=phone,desc=desc,date= datetime.today())
-    contact.save()
-    messages.success(request, 'Your message has been sent!')
+      contact =Contact(name=name,email=email,phone=phone,desc=desc,date= datetime.today())
+      contact.save()
+      messages.success(request, 'Your message has been sent!')
     return render(request,"contact.html")
+
 def services(request) :
     return render(request,"services.html")
    

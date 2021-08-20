@@ -54,7 +54,8 @@
     <div class="container">
         <h1>Contact Us</h1>
         <div class="main">
-            <form action="/contact" method="POST"> {% csrf_token %} 
+            <form method="post" action="/contact" >
+             {% csrf_token %} 
             
             <h3>Name</h3>
             <input type="text" id="name" placeholder="Enter your name">
@@ -68,7 +69,7 @@
             <h3>Description</h3>
             <input type="text" id="desc" placeholder="Description"><br><hr>
 
-            <button type="submit" class="btn">Submit</button>
+            <button class="btn" type="submit" >Submit</button>
 
             </form>
         </div>
