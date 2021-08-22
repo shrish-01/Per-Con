@@ -7,6 +7,6 @@ class Contact(models.Model):
     phone=models.CharField(max_length=120)
     desc=models.TextField()
     date=models.DateField()
-    def __str__(self):
-        return self.name
+def __str__(self):
+ return self.name
     
