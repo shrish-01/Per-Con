@@ -10,7 +10,7 @@ h5{
 {% endfor%}
 
 
-<form method = "POST" action = "register">
+<form method = "POST" action = "/register/">
    {% csrf_token %}   
    <p> Username : </p>
    <input type = "text" name="username" />
