@@ -117,41 +117,23 @@
 
     <div class="container1">
         <h1>Contact Us</h1>
-        <form action="element">
+        <form method='POST' action="/contact/" >
+        {% csrf_token %}
+
             <div class="row">
                 <div class="head">
-                    <label for="fname">First name</label>
+                    <label for="name">Name</label>
                     <div class="box">
-                        <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+                        <input type="text" id="name" name="name" placeholder="Enter your Name">
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="head">
-                    <label for="lname">Last name</label>
-                    <div class="box">
-                        <input type="text" id="lname" name="lname" placeholder="Enter your last name">
-                    </div>
-                </div>
-            </div>
+           
             <div class="row">
                 <div class="head">
                     <label for="email">E-mail</label>
                     <div class="box">
                         <input type="text" id="email" name="email" placeholder="Enter your email id">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="head">
-                    <label for="country">Country</label>
-                    <div class="box">
-                        <select id="country" name="country">
-                            <option value="india">India</option>
-                            <option value="australia">Australia</option>
-                            <option value="america">America</option>
-                            <option value="russia">Russia</option>
-                        </select>
                     </div>
                 </div>
             </div>
@@ -165,9 +147,9 @@
             </div>
             <div class="row">
                 <div class="head">
-                    <label for="sub">Subject</label>
+                    <label for="desc">Description</label>
                     <div class="box">
-                        <input type="text" id="sub" name="sub" placeholder="Write something">
+                        <input type="text" id="desc" name="desc" placeholder="Write something">
                     </div>
                 </div>
             </div>
