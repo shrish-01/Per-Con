@@ -7,7 +7,7 @@ from django.contrib import messages
 
 
 def home(request):
-    return render(request,"home.html")
+    return render(request,"ind.html")
  
 def about(request) :
     return render(request,"about.html")

@@ -1,0 +1,150 @@
+{% extends 'home.html' %}
+{% block title %} Contact Us {% endblock %}
+{% block body %}
+
+<head>
+    <style>
+
+.container1 {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgb(213, 238, 238);
+            background-color: rgb(198, 231, 228);
+            border-radius: 5px;
+
+        }
+
+        .btn {
+            background-color: blue;
+            padding: 10px;
+            width: 90px;
+            border: 1.2px solid black;
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+            border-radius: 10px;
+            font-family: cursive;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        h1 {
+            font-family: cursive;
+            font-style: oblique;
+            font-size: 300%;
+            text-align: center;
+        }
+
+        .head {
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .box {
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+            font-family: cursive;
+            font-size: 2vw;
+        }
+
+        #fname,
+        #lname,
+        #email,
+        #country,
+        #phone,
+        #sub {
+            width: 300%;
+            height: 150%;
+            margin: 2px 0px 5px 10px;
+        }
+
+        @media screen and (max-width: 300px) {
+
+            .head,
+            .box,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+
+<div class="container1">
+    <h1>Contact Us</h1>
+    <form action="element">
+        <div class="row">
+            <div class="head">
+                <label for="fname">First name</label>
+                <div class="box">
+                    <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="head">
+                <label for="lname">Last name</label>
+                <div class="box">
+                    <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="head">
+                <label for="email">E-mail</label>
+                <div class="box">
+                    <input type="text" id="email" name="email" placeholder="Enter your email id">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="head">
+                <label for="country">Country</label>
+                <div class="box">
+                    <select id="country" name="country">
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                        <option value="america">America</option>
+                        <option value="russia">Russia</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="head">
+                <label for="phone">Contact no.</label>
+                <div class="box">
+                    <input type="text" id="phone" name="phone" placeholder="Enter your contact no.">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="head">
+                <label for="sub">Subject</label>
+                <div class="box">
+                    <input type="text" id="sub" name="sub" placeholder="Write something">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" class="btn" value="Submit">
+        </div>
+    </form>
+</div>
+
+</head>
+
+{% endblock %}
