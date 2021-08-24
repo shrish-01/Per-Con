@@ -1,7 +1,5 @@
-{% Extends 'basic.html' %}
+{% extends "basic.html" %}
 {% block title %} Contact us page {% endblock title %}
-
-
 <!doctype html>
 <html lang="en">
 
@@ -29,7 +27,7 @@
         }
     </style>
 </head>
-
+{% block body %} 
 <body>
     <script>
         includeHTML(bas.html);
@@ -112,3 +110,4 @@
 </body>
 
 </html>
+{% endblock body %}

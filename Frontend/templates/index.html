@@ -1,6 +1,4 @@
-{% Extends 'basic.html' %}
-{% block title %} Contact us page {% endblock title %}
-
+{% extends 'basic.html' %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>main {% blockbody title%}{% endblock %}</title>
+    <title>main{% block title %} Contact us page {% endblock title %}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -172,7 +170,7 @@
 
         <title>Hello, world!</title>
     </head>
-
+{% block body %} 
     <body>
         <div class="wholebox">
 
@@ -492,3 +490,4 @@ function topFunction() {
 
     </html>
 </body>
+{% endblock body %}
