@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.models import auth , User
 
 def home(request):
-    return render(request,"ind.html")
+    return render(request,"index.html")
  
 def about(request) :
     return render(request,"about.html")
@@ -22,10 +22,11 @@ def contact(request) :
       contact =Contact(name=name,email=email,phone=phone,desc=desc,date= datetime.today())
       contact.save()
       messages.success(request, 'Your message has been sent!')
-    return render(request,"cont.html")
+    return render(request,"contact.html")
 
 def services(request) :
     return render(request,"services.html")
+    
 def register(request):
     if request.method == 'POST':
         username = request.POST['username']

@@ -1,0 +1,114 @@
+{% Extends 'basic.html' %}
+{% block title %} Contact us page {% endblock title %}
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Contact</title>
+    <style>
+        .main{
+            margin: auto;
+            max-width: 1000px;
+        }
+        label{
+            font-family: cursive;
+            font-size: 1.4rem;
+        }
+        body{
+        background-image: linear-gradient(to bottom right,rgb(255, 255, 255), purple);
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        includeHTML(bas.html);
+        </script>
+    <div class="main">
+<h2>Contact Us...</h2><hr>
+        <form>
+            <br>
+            <div class="form-row">
+                <div class="col">
+                    <label for="usr">First Name</label>
+                  <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col">
+                    <label for="usr">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Last name">
+                </div>
+            </div><br>
+            <div class="form-row">
+                <div class="col">
+                    <label for="usr">Contact no.</label>
+                  <input type="number" class="form-control" placeholder="Enter contact no.">
+                </div>
+                <div class="col">
+                    <label for="usr">Telephone no.</label>
+                  <input type="text" class="form-control" placeholder="Enter Telephone no.">
+                </div>
+              </div><br>
+              <div class="form-row ">
+                <div class="form-group col-md-2">
+                    <label for="inputCountry">Country</label>
+                    <select id="inputCountry" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                      <option>...</option>
+                      <option>...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputGender">Gender</label>
+                    <select id="inputGender" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1" style="font-size: 1rem;">I agree the above terms and condition</label><br>
+            </div>
+            <button type="submit" class="btn btn-primary" onClick="parent.location='bas.html'">Submit</button>
+        </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
