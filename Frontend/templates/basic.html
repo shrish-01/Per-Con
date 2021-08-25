@@ -14,7 +14,6 @@
 
     <style>
         body {
-            padding: 20px;
             font-family: Arial;
             font-size: 2rem;
         }
@@ -60,6 +59,7 @@
 
         .box {
             background-image: linear-gradient(to bottom right, red, yellow);
+            padding-top: -10px;
         }
 
         .wholebox {
@@ -76,6 +76,19 @@
             border-radius: 2vw;
             background-color: rgb(255, 253, 162);
             font-weight: bold;
+        }
+        h1{
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        h1,h3,h4,h5{
+            text-align:center;
+        }
+         h3 {
+            font-family: cursive;
+            font-style: italic;
+            font-size: 2.7rem;
+            color: black;
         }
 
 
@@ -122,6 +135,8 @@
             width: 20%;
             height: 20%;
             border-radius: 1.5vw;
+            float:left;
+            padding: 10px;
         }
 
         .navimg {
@@ -129,30 +144,16 @@
             width: 10vw;
         }
 
-        h3 {
-            font-family: cursive;
-            font-style: italic;
-            font-size: 3rem;
-            color: black;
-        }
-
         .navbar {
             min-height: 75px;
             font-size: 2rem;
+            margin-bottom: 0px;
         }
 
         .navbar-brand {
             font-size: 2.25rem;
         }
 
-        .jumbotron {
-            margin-bottom: 5rem;
-        }
-
-        .jumbox {
-            padding: 2vw 2vw 2vw 2vw;
-            margin: 2vw 2vw 2vw 2vw;
-        }
     </style>
 </head>
 
@@ -169,13 +170,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title>Hello, world!</title>
+        <title>Basic</title>
     </head>
 
     <body>
         <div class="wholebox">
             <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-                <a class="navbar-brand" href="#">Per-Con</a>
+                <a class="navbar-brand" href="/ ">Per-Con</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -217,12 +218,12 @@
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <div class="btn">
-                            <button type="button" class="btn btn-primary" onClick="parent.location='log.html'">Login
+                            <button type="button" class="btn btn-primary" onClick="parent.location='login'">Login
                                 <a href="#">
                                     <span class="glyphicon glyphicon-log-in" style="color: cornsilk;"></span>
                                 </a></button>
                             <button type="button" class="btn btn-primary"
-                                onClick="parent.location='sign.html'">Sign-up</button>
+                                onClick="parent.location='register'">Sign-up</button>
                             <!--<ul class="nav navbar-nav navbar-right">
                                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                               </ul>
@@ -276,7 +277,6 @@
                 </a>
             </div>
 
-{% block body %} {% endblock body %}
             <br><br><br>
             <hr>
             <div class="main">
@@ -292,11 +292,13 @@
                 <br>
                 <br>
                 <br>
-                <h1>Per-Con</h1>
+                <h1 style="font-size: 4vw;">Per-Con</h1>
                 <hr>
 
                 <h1>"Every moment is a fresh begining"</h1><br>
-                <p>Resize the browser window to see the responsive effect.</p><br>
+                <h5>Resize the browser window to see the responsive effect.</h5><br><br>
+
+{% block body %} {% endblock body %}
 
                 <footer class="container-fluid text-center">
                     <p>Go to the top</p>
