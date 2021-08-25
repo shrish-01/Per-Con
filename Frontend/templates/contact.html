@@ -30,46 +30,44 @@
 {% block body %} 
 <body>
     <script>
-        includeHTML(bas.html);
+        includeHTML(basic.html);
         </script>
     <div class="main">
 <h2>Contact Us...</h2><hr>
-        <form>
-            <br>
-            <div class="form-row">
+        <form method='POST' action="/contact/" >
+          {% csrf_token %}
+                <div class="form-row">
+            
                 <div class="col">
-                    <label for="usr">First Name</label>
-                  <input type="text" class="form-control" placeholder="First name">
+                    <label for="name"> Name</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Enter full name">
                 </div>
-                <div class="col">
-                    <label for="usr">Last Name</label>
-                  <input type="text" class="form-control" placeholder="Last name">
-                </div>
+            
             </div><br>
             <div class="form-row">
                 <div class="col">
-                    <label for="usr">Contact no.</label>
-                  <input type="number" class="form-control" placeholder="Enter contact no.">
+                    <label for="phone">Contact no.</label>
+                  <input type="number" id="phone" name="phone" class="form-control" placeholder="Enter contact no.">
                 </div>
                 <div class="col">
-                    <label for="usr">Telephone no.</label>
-                  <input type="text" class="form-control" placeholder="Enter Telephone no.">
+                    <label for="telephone">Telephone no.</label>
+                  <input type="number" id="telephone" name="telephone" class="form-control" placeholder="Enter Telephone no.">
                 </div>
               </div><br>
               <div class="form-row ">
                 <div class="form-group col-md-2">
-                    <label for="inputCountry">Country</label>
-                    <select id="inputCountry" class="form-control">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" class="form-control">
                       <option selected>Choose...</option>
-                      <option>...</option>
-                      <option>...</option>
-                      <option>...</option>
-                      <option>...</option>
+                      <option>India</option>
+                      <option>US</option>
+                      <option>Italy</option>
+                      <option>Other</option>
                     </select>
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="inputGender">Gender</label>
-                    <select id="inputGender" class="form-control">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" class="form-control">
                       <option selected>Choose...</option>
                       <option>Male</option>
                       <option>Female</option>
@@ -78,16 +76,19 @@
                   </div>
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp"
                     placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                <small id="email" name="email"class="form-text text-muted">We'll never share your email with anyone
                     else.</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
+                    </div> <br>
+                <div class="col">
+                <label for="desc">Description</label>
+                <input type="text" id="desc" name="desc" class="form-control" placeholder="Description">
+                </div>
+        
+            
+             
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1" style="font-size: 1rem;">I agree the above terms and condition</label><br>
