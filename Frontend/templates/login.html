@@ -1,7 +1,7 @@
 
 {% block title %} Login page {% endblock title %}
 
-<title>log</title>
+<title>login</title>
 
 <body>
 
@@ -31,8 +31,8 @@
                                     <input type="password" class="form-control" id="password1"
                                         placeholder="Your password...">
                                 </div>
-                                <button type="button" class="btn btn-info btn-block btn-round"
-                                    onClick="parent.location='/login/'">Login</button>
+                                <button type="submit" class="btn btn-info btn-block btn-round"
+                                    formaction="/index/">Login</button>
                             </form>
                             <br>
                             <p><span class="psw">Forgot <a href="#">password?</a></span>
@@ -44,7 +44,7 @@
                             </p>
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
-                            <div class="signup-section">Not a member yet? <a href="/login" class="text-info"> Sign
+                            <div class="signup-section">Not a member yet? <a href="/register" class="text-info"> Sign
                                     Up</a>.
                             </div>
                         </div>
