@@ -52,7 +52,7 @@ def register(request):
             else:
                 user = User.objects.create_user(username=username , email=email , password=password , phone=phone , country = country , gender = gender )
                 user.save();
-                return redirect('login')
+                return redirect('login.html')
         else:
             messages.info(request , 'Password is not same')
             return redirect('register')
