@@ -32,10 +32,15 @@ def services(request) :
     
 def register(request):
     if request.method == 'POST':
-        username = request.POST['username']
+        name = request.POST['name']
+        phone = request.POST.get('phone')
         email = request.POST['email']
+        country= request.POST.get('country')
+        gender= request.POST.get('gender')
+        username = request.POST['username']
         password = request.POST['password']
         password2 = request.POST['password2']
+
 
         if password == password2 :
             if User.objects.filter(email=email).exists():

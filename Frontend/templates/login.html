@@ -1,4 +1,4 @@
-{% extends 'basic.html' %}
+
 {% block title %} Login page {% endblock title %}
 
 <title>log</title>
@@ -32,7 +32,7 @@
                                         placeholder="Your password...">
                                 </div>
                                 <button type="button" class="btn btn-info btn-block btn-round"
-                                    onClick="parent.location='basic'">Login</button>
+                                    onClick="parent.location='/login/'">Login</button>
                             </form>
                             <br>
                             <p><span class="psw">Forgot <a href="#">password?</a></span>
@@ -53,8 +53,8 @@
             </div>
         </div>
 
-
-
+        
+        <script>
         $(document).ready(function () {
         $('#loginModal').modal('show');
         $(function () {
