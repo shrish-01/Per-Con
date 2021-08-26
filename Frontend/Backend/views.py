@@ -25,7 +25,7 @@ def contact(request) :
       contact =Contact(name=name,phone=phone,telephone=telephone,country=country,gender=gender,email=email,desc=desc,date= datetime.today())
       contact.save()
       messages.success(request, 'Your message has been sent!')
-    return render(request,"contact.html")
+    return render(request,"cont.html")
 
 def services(request) :
     return render(request,"services.html")
@@ -50,7 +50,7 @@ def register(request):
                 messages.info(request , 'Username Already Used' )
                 return redirect('register')
             else:
-                user = User.objects.create_user(username=username , email=email , password=password)
+                user = User.objects.create_user(username=username , email=email , password=password , phone=phone , country = country , gender = gender )
                 user.save();
                 return redirect('login')
         else:
