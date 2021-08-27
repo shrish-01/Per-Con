@@ -48,9 +48,9 @@ def register(request):
                 messages.info(request , 'Username Already Used' )
                 return redirect('register')
             else:
-                user = User.objects.create_user(username=username , email=email , password=password , phone=phone , country = country , gender = gender )
+                user = User.objects.create_user(email=email , username=username ,password=password   )
                 user.save();
-                return redirect('login.html')
+                return redirect('/login')
         else:
             messages.info(request , 'Password is not same')
             return redirect('register')

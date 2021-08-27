@@ -17,9 +17,6 @@
 </head>
 
 
-{% for message in messages %}
-<h5>{{message}}</h5>
-{% endfor%}
 
 <body>
 
@@ -38,28 +35,38 @@
                             <h4>Sign-up</h4>
                         </div><br>
                         <div class="d-flex flex-column text-center">
-                            <form>
+                        <style>
+h5{
+    color: red;
+    
+}
+</style>
+{% for message in messages %}
+<h5>{{message}}</h5>
+{% endfor%}
+                            <form method="POST" action="/register/">
+                            {% csrf_token %}
                                 <div class="form-group">
-                                    <label for="usr">Full Name</label>
-                                    <input type="username" class="form-control" id="name"
-                                        placeholder="Enter full name...">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" id="name"
+                                       name="name" placeholder="Enter full name...">
                                 </div>
                                 <div class="form-group">
-                                    <label for="usr">Contact no.</label>
-                                    <input type="contact" class="form-control" id="contact"
+                                    <label for="phone">Contact no.</label>
+                                    <input type="number" name ="phone" id="phone"class="form-control" 
                                         placeholder="Enter contact no...">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                    <label for="email">Email address</label>
+                                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
                                         placeholder="Enter email">
-                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    <small id="email" class="form-text text-muted">We'll never share your email with anyone
                                         else.</small>
                                 </div>
                                 <div class="form-row ">
                                     <div class="form-group col-md-6">
-                                        <label for="inputCountry">Country</label>
-                                        <select id="inputCountry" class="form-control">
+                                        <label for="country">Country</label>
+                                        <select id="country" name="country" class="form-control">
                                           <option selected>Choose...</option>
                                           <option>America</option>
                                           <option>India</option>
@@ -68,8 +75,8 @@
                                         </select>
                                       </div>
                                       <div class="form-group col-md-6">
-                                        <label for="inputGender">Gender</label>
-                                        <select id="inputGender" class="form-control">
+                                        <label for="gender">Gender</label>
+                                        <select id="gender" name="gender" class="form-control">
                                           <option selected>Choose...</option>
                                           <option>Male</option>
                                           <option>Female</option>
@@ -78,18 +85,18 @@
                                       </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="usr">Username</label>
-                                    <input type="username" class="form-control" id="username" name = 'username'
+                                    <label for="username">Username</label>
+                                    <input type="username" name="username" class="form-control" id="username" name = 'username'
                                         placeholder="Enter username...">
                                 </div>
                                 <div class="form-group">
                                     <label for="usr">Password</label>
-                                    <input type="password" class="form-control" id="password" name = 'password'
+                                    <input type="password" name="password" class="form-control" id="password" name = 'password'
                                         placeholder="Your password...">
                                 </div>
                                 <div class="form-group">
                                     <label for="usr">Confirm Password</label>
-                                    <input type="password" class="form-control" id="password2" name = 'password2'
+                                    <input type="password"  name="password2" class="form-control" id="password2" name = 'password2'
                                         placeholder="Confirm password...">
                                 </div>
                                 <button type="submit" class="btn btn-info btn-block btn-round"

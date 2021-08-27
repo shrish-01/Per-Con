@@ -20,7 +20,8 @@
                             <h4>Login</h4>
                         </div><br>
                         <div class="d-flex flex-column text-center">
-                            <form>
+                            <form method="POST" action="/home/">
+                            {% csrf_token %}
                                 <div class="form-group">
                                     <label for="usr" style="text-align: left;">Username</label>
                                     <input type="username" class="form-control" id="username"
@@ -32,7 +33,7 @@
                                         placeholder="Your password...">
                                 </div>
                                 <button type="submit" class="btn btn-info btn-block btn-round"
-                                    formaction="/index/">Login</button>
+                                    >Login</button>
                             </form>
                             <br>
                             <p><span class="psw">Forgot <a href="#">password?</a></span>
