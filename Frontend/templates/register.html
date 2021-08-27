@@ -44,7 +44,7 @@ h5{
 {% for message in messages %}
 <h5>{{message}}</h5>
 {% endfor%}
-                            <form method="POST" action="/register/">
+                            <form method="POST" action="/login/">
                             {% csrf_token %}
                                 <div class="form-group">
                                     <label for="name">Full Name</label>
