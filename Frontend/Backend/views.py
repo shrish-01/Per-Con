@@ -15,14 +15,12 @@ def about(request) :
 def contact(request) :
     if request.method == 'POST' :
       name = request.POST.get('name')
-      phone = request.POST.get('phone')
-      telephone = request.POST.get('telephone')
-      country= request.POST.get('country')
-      gender= request.POST.get('gender')
       email= request.POST.get('email')
+      phone = request.POST.get('phone')
+      content=request.POST.get("content")
       desc = request.POST.get('desc')
       
-      contact =Contact(name=name,phone=phone,telephone=telephone,country=country,gender=gender,email=email,desc=desc,date= datetime.today())
+      contact =Contact(name=name,phone=phone,content=content,email=email,desc=desc,date= datetime.today())
       contact.save()
       messages.success(request, 'Your message has been sent!')
     return render(request,"cont.html")
@@ -33,10 +31,10 @@ def services(request) :
 def register(request):
     if request.method == 'POST':
         name = request.POST['name']
-        phone = request.POST.get('phone')
+        phone = request.POST['phone']
         email = request.POST['email']
-        country= request.POST.get('country')
-        gender= request.POST.get('gender')
+        country= request.POST['country']
+        gender= request.POST['gender']
         username = request.POST['username']
         password = request.POST['password']
         password2 = request.POST['password2']
