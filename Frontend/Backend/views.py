@@ -31,10 +31,7 @@ def services(request) :
 def register(request):
     if request.method == 'POST':
         name = request.POST['name']
-        phone = request.POST['phone']
         email = request.POST['email']
-        country= request.POST['country']
-        gender= request.POST['gender']
         username = request.POST['username']
         password = request.POST['password']
         password2 = request.POST['password2']
@@ -48,7 +45,7 @@ def register(request):
                 messages.info(request , 'Username Already Used' )
                 return redirect('register')
             else:
-                user = User.objects.create_user(email=email , username=username ,password=password   )
+                user = User.objects.create_user(name=name,email=email , username=username ,password=password   )
                 user.save();
                 return redirect('/login')
         else:
