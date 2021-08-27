@@ -17,13 +17,13 @@ def contact(request) :
       name = request.POST.get('name')
       email= request.POST.get('email')
       phone = request.POST.get('phone')
-      content=request.POST.get("content")
+      content=request.POST.get('content')
       desc = request.POST.get('desc')
       
-      contact =Contact(name=name,phone=phone,content=content,email=email,desc=desc,date= datetime.today())
+      contact =Contact(name=name,email=email,phone=phone,content=content,desc=desc,date= datetime.today())
       contact.save()
       messages.success(request, 'Your message has been sent!')
-    return render(request,"cont.html")
+    return render(request,"contact.html")
 
 def services(request) :
     return render(request,"services.html")
