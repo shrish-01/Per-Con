@@ -1,7 +1,20 @@
+<!doctype html>
+<html lang="en">
 
-{% block title %} Login page {% endblock title %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>log</title>
+    <style>
+
+    </style>
+</head>
 
 <body>
 
@@ -21,7 +34,7 @@
                         </div><br>
                         <div class="d-flex flex-column text-center">
                             <form method="POST" action="/home/">
-                            {% csrf_token %}
+                                {% csrf_token %}
                                 <div class="form-group">
                                     <label for="usr" style="text-align: left;">Username</label>
                                     <input type="username" class="form-control" id="username"
@@ -32,8 +45,8 @@
                                     <input type="password" class="form-control" id="password1"
                                         placeholder="Your password...">
                                 </div>
-                                <button type="submit" class="btn btn-info btn-block btn-round"
-                                    >Login</button>
+                                <button type="button" class="btn btn-info btn-block btn-round"
+                                    onClick="parent.location='/home'">Login</button>
                             </form>
                             <br>
                             <p><span class="psw">Forgot <a href="#">password?</a></span>
@@ -41,8 +54,7 @@
                             <p><a href="#">Instagram</a>
                                 <a href="#">Facebook</a>
                                 <a href="#">Twitter</a>
-                            </p>
-                            </p>
+                            </p><br></p>
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
                             <div class="signup-section">Not a member yet? <a href="/register" class="text-info"> Sign
@@ -54,13 +66,26 @@
             </div>
         </div>
 
-        
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
         <script>
-        $(document).ready(function () {
-        $('#loginModal').modal('show');
-        $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-        })
-        });
+            $(document).ready(function () {
+                $('#loginModal').modal('show');
+                $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+                })
+            });
         </script>
 </body>
+
+</html>
