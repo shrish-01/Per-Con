@@ -25,5 +25,7 @@ urlpatterns = [
     path('managing/' , views.managing, name = 'managing'),
     path('contheartbreak/' , views.contheartbreak , name = 'contheartbreak'),
     path('test/' , views.test , name = 'test'),
+    path('mental/' , views.mental , name = 'mental'),
+    path('physical/' , views.physical, name = 'physical'),
 
 ]

@@ -105,3 +105,9 @@ def handelLogout(request):
     logout(request)
     messages.success(request, "Successfully logged out")
     return redirect('/')
+
+def mental(request) :
+    return render(request,"mental.html")
+
+def physical(request) :
+    return render(request,"physical.html")
