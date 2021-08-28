@@ -23,6 +23,11 @@ urlpatterns = [
     path('artofparenting/' , views.artofparenting , name = 'artofparenting'),
     path('copingwithpandemic/' , views.copingwithpandemic , name = 'copingwithpandemic'),
     path('managing/' , views.managing, name = 'managing'),
+    path('contheartbreak/' , views.contheartbreak , name = 'heartbreak'),
+    path('managing/' , views.managing , name = 'managing'),
+    path('parenting/' , views.parenting , name = 'parenting'),
+    path('pandemic/' , views.pandemic , name = 'pandemic'),
+   
     
     
 

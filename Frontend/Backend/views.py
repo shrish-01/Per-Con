@@ -4,14 +4,28 @@ from django.http import HttpResponse
 from .models import *
 from datetime import datetime
 from django.contrib import messages
-from django.contrib.auth.models import auth , User
+from django.contrib.auth.models import auth , User 
+
 
 def home(request):
     return render(request,"index.html")
  
 def about(request) :
     return render(request,"about.html")
-    
+
+def contheartbreak(request) :
+    return render(request,"contheartbreak.html")
+
+
+def managing(request) :
+    return render(request,"managing.html")
+
+def parenting(request) :
+    return render(request,"parenting.html")
+
+def pandemic(request) :
+    return render(request,"pandemic.html")        
+
 def contact(request) :
     if request.method == 'POST' :
       name = request.POST.get('name')
@@ -45,7 +59,7 @@ def register(request):
                 messages.info(request , 'Username Already Used' )
                 return redirect('register')
             else:
-                user = User.objects.create_user(name=name,email=email , username=username ,password=password   )
+                user = User.objects.create_user(email=email , username=username ,password=password)
                 user.save();
                 return redirect('/login')
         else:
