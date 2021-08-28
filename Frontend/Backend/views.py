@@ -70,4 +70,19 @@ def login(request):
             
   else: 
              return render ( request , 'login.html')
-   
+def contheartbreak(request) :
+    return render(request,"contheartbreak.html")
+def jealousy(request) :
+    return render(request,"jealousy.html")
+def envy(request) :
+    return render(request,"envy.html")
+def shyness(request) :
+    return render(request,"shyness.html")
+def loneliness(request) :
+    return render(request,"loneliness.html")
+def copingwithpandemic(request) :
+    return render(request,"copingwithpandemic.html")
+def managing(request) :
+    return render(request,"managing.html")
+def artofparenting(request) :
+    return render(request,"artofparenting.html")
