@@ -15,20 +15,15 @@ urlpatterns = [
     path('contact/register' , views.register , name = 'cr'),
     path('services/login' , views.login , name = 'sl'),
     path('services/register' , views.register , name = 'sr'),
-    path('contheartbreak/' , views.contheartbreak , name = 'contheartbreak'),
-    path('envy/' , views.envy , name = 'envy'),
-    path('shyness/' , views.shyness , name = 'shyness'),
-    path('loneliness/' , views.loneliness , name = 'loneliness'),
-    path('jealousy/' , views.jealousy , name = 'jealousy'),
-    path('artofparenting/' , views.artofparenting , name = 'artofparenting'),
     path('copingwithpandemic/' , views.copingwithpandemic , name = 'copingwithpandemic'),
-    path('managing/' , views.managing, name = 'managing'),
-    path('contheartbreak/' , views.contheartbreak , name = 'heartbreak'),
+    path('artofparenting/' , views.artofparenting , name = 'artofparenting'),
     path('managing/' , views.managing , name = 'managing'),
-    path('parenting/' , views.parenting , name = 'parenting'),
-    path('pandemic/' , views.pandemic , name = 'pandemic'),
+    path('contheartbreak/' , views.contheartbreak , name = 'contheartbreak'),
+    path('shyness/' , views.shyness , name = 'shyness'),
+    path('envy/' , views.envy , name = 'envy'),
+    path('disorder/' , views.disorder , name = 'disorder'),
+    path('loneliness/' , views.loneliness , name = 'loneliness'),
+    path('rproblem/' , views.rproblem , name = 'rproblem'),
+    path('test/' , views.test, name = 'test'),
    
-    
-    
-
 ]
