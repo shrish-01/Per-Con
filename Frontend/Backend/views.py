@@ -12,19 +12,34 @@ def home(request):
  
 def about(request) :
     return render(request,"about.html")
+     
+def test(request) :
+    return render(request,"test.html")
 
 def contheartbreak(request) :
     return render(request,"contheartbreak.html")
 
+def emotional(request) :
+    return render(request,"emotional.html")
+
+def envy(request) :
+    return render(request,"envy.html")
+
+def shyness(request) :
+    return render(request,"shyness.html")
+
+def loneliness(request) :
+    return render(request,"loneliness.html")
+
+def copingwithpandemic(request) :
+    return render(request,"copingwithpandemic.html")
 
 def managing(request) :
     return render(request,"managing.html")
 
-def parenting(request) :
-    return render(request,"parenting.html")
+def artofparenting(request) :
+    return render(request,"artofparenting.html")
 
-def pandemic(request) :
-    return render(request,"pandemic.html")        
 
 def contact(request) :
     if request.method == 'POST' :
@@ -84,19 +99,3 @@ def login(request):
             
   else: 
              return render ( request , 'login.html')
-def contheartbreak(request) :
-    return render(request,"contheartbreak.html")
-def jealousy(request) :
-    return render(request,"jealousy.html")
-def envy(request) :
-    return render(request,"envy.html")
-def shyness(request) :
-    return render(request,"shyness.html")
-def loneliness(request) :
-    return render(request,"loneliness.html")
-def copingwithpandemic(request) :
-    return render(request,"copingwithpandemic.html")
-def managing(request) :
-    return render(request,"managing.html")
-def artofparenting(request) :
-    return render(request,"artofparenting.html")
