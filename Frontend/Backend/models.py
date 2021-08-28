@@ -10,7 +10,7 @@ class Contact(models.Model):
         ('LC', 'Life Coaching'),
         ('LR', 'Leadership'),
         ('TM', 'Team Managament'),
-    
+        ('HS','Helping Someone'),
     )
     content = models.CharField(max_length=300, default="Life coaching",choices = CHOICES)
    
