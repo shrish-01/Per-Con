@@ -5,6 +5,7 @@ from .models import *
 from datetime import datetime
 from django.contrib import messages
 from django.contrib.auth.models import auth , User 
+from django.contrib.auth  import authenticate,  login, logout
 
 
 def home(request):
@@ -65,7 +66,6 @@ def register(request):
         password = request.POST['password']
         password2 = request.POST['password2']
 
-
         if password == password2 :
             if User.objects.filter(email=email).exists():
                 messages.info(request , 'Email already used')
@@ -85,17 +85,23 @@ def register(request):
 
 def login(request):
   if request.method == 'POST':
-           username = request.POST ['username']
-           password = request.POST['password']
+           loginusername = request.POST ['loginusername']
+           loginpassword1 = request.POST['loginpassword']
 
-           user = auth.authenticate(username=username , password=password)
+           user = auth.authenticate(username=loginusername , password=loginpassword1)
 
            if user is not None:
                  auth.login(request , user)
+                 messages.success(request,"Successfully loged in")
                  return redirect('/')
            else:
-            messages.info(request , 'invalid')
+            messages.info(request , 'invalid credentials, please try again')
             return redirect('login')
             
   else: 
              return render ( request , 'login.html')
+
+def handelLogout(request):
+    logout(request)
+    messages.success(request, "Successfully logged out")
+    return redirect('/')
