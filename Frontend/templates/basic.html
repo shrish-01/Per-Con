@@ -23,21 +23,93 @@
             font-size: 2rem;
         }
 
-        /* Center website */
-        .main {
-            max-width: 1000px;
-            margin: auto;
+        .wholebox {
+            background-color: rgb(255, 248, 181);
         }
 
         * {
             box-sizing: border-box;
         }
 
-        /* Add a gray background color and some padding to the footer */
-        footer {
-            background-color: #f2f2f2;
-            padding: 25px;
+        .box {
+            background-image: linear-gradient(to bottom right, red, yellow);
+            padding-top: -10px;
         }
+
+        .navimg {
+            height: 20%;
+            width: 10vw;
+        }
+
+        .navbar {
+            min-height: 75px;
+            font-size: 2rem;
+            margin-bottom: 0px;
+            background-color: rgb(255, 162, 153);
+        }
+
+        .navbar-brand {
+            font-size: 2.25rem;
+        }
+
+        /* Center website */
+        .main {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .img {
+            width: 20%;
+            height: 20%;
+            border-radius: 1.5vw;
+            float: left;
+            padding: 10px;
+        }
+
+        .btn {
+            padding-right: 2vw;
+        }
+
+        .btn {
+            font-family: 'PT Sans', sans-serif;
+            font-size: 30px;
+            text-transform: capitalize;
+            font-weight: 600;
+            padding: 11px 30px;
+            border-radius: 6px;
+            line-height: 1.8;
+            letter-spacing: 0px;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+            word-wrap: break-word;
+            white-space: normal !important;
+        }
+
+        .btn-primary {
+            background-color: #f8591b;
+            color: #fff;
+            border: 1px solid #f8591b;
+            
+        }
+
+        .btn-primary:hover {
+            background-color: #e64c10;
+            color: #fff;
+            border: 1px solid #e64c10;
+        }
+
+        .btn-primary.focus,
+        .btn-primary:focus {
+            background-color: #e64c10;
+            color: #fff;
+            border: 1px solid #e64c10;
+        }
+        .loginbutton{
+            font-size: 1.3rem;
+        }
+
+
 
         .carousel-inner img {
             width: 100%;
@@ -46,15 +118,27 @@
             min-height: 200px;
         }
 
-        /* Hide the carousel text when the screen is less than 600 pixels wide */
-        @media (max-width: 600px) {
-            .carousel-caption {
-                display: none;
-            }
+        .carousel-inner #picture {
+
+            max-height: 440px;
+            width: 80%;
         }
 
-        .btn {
-            padding-right: 2vw;
+        .endimage {
+            height: 100px;
+            width: 100px;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        /* Add padding BETWEEN each column (if you want) */
+        .row,
+        .row>.column {
+            padding: 25px;
         }
 
         .row {
@@ -62,14 +146,31 @@
             margin-left: 5vw;
         }
 
-        .box {
-            background-image: linear-gradient(to bottom right, red, yellow);
-            padding-top: -10px;
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
-        .wholebox {
-            background-color: rgb(255, 248, 181);
+        .thumbnail {
+            height: 20vw;
         }
+
+        .footerimage {
+            height: 8vw;
+            width: 100%;
+        }
+
+        /*doneeeeeeeeeeeeeeeeeeeeeeeeeeeee*/
+
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+
 
         h2 {
             text-align: center;
@@ -114,11 +215,8 @@
 
 
 
-        /* Add padding BETWEEN each column (if you want) */
-        .row,
-        .row>.column {
-            padding: 25px;
-        }
+
+
 
         /* Create four equal columns that floats next to each other */
         .column {
@@ -126,12 +224,6 @@
             width: 50%;
         }
 
-        /* Clear floats after rows */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
 
         /* Content */
         .content {
@@ -146,45 +238,37 @@
             height: 20vw;
         }
 
-        @media screen and (max-width: 320px) {
+        .imgfinal {
+            border-radius: 1vw;
+        }
+
+        .startblock {
+            padding: 10px 10px;
+            margin: 10px 10px;
+        }
+
+        #startbox {
+            background-color: gray;
+        }
+
+
+        @media screen and (min-width: 320px) and (max-width: 450px) {
 
             .image,
-            .img {
+            .img,
+            .imgfinal {
                 width: 100%;
                 height: 50%
             }
         }
 
         /* Responsive layout - makes a two column-layout instead of four columns */
-        @media screen and (max-width: 320px) {
-            .column {
+        @media screen and (min-width: 320px) and (max-width: 450px) {
+
+            .column,
+            .col {
                 width: 100%;
             }
-        }
-
-        .img {
-            width: 20%;
-            height: 20%;
-            border-radius: 1.5vw;
-            float: left;
-            padding: 10px;
-        }
-
-        .navimg {
-            height: 20%;
-            width: 10vw;
-        }
-
-        .navbar {
-            min-height: 75px;
-            font-size: 2rem;
-            margin-bottom: 0px;
-            background-color: rgb(255, 162, 153);
-        }
-
-
-        .navbar-brand {
-            font-size: 2.25rem;
         }
 
         h1,
@@ -197,9 +281,16 @@
             margin: 0px 0px 15px 0px;
             font-weight: 400;
             font-family: 'PT Sans', sans-serif;
-            text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
+            /* text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;*/
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 450px) {
+
+            h4 {
+                font-size: 1.5rem;
+            }
         }
 
         h1 {
@@ -424,41 +515,6 @@
             margin-bottom: 60px;
         }
 
-        .btn {
-            font-family: 'PT Sans', sans-serif;
-            font-size: 18px;
-            text-transform: capitalize;
-            font-weight: 600;
-            padding: 11px 30px;
-            border-radius: 6px;
-            line-height: 1.8;
-            letter-spacing: 0px;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            transition: all 0.3s;
-            word-wrap: break-word;
-            white-space: normal !important;
-        }
-
-        .btn-primary {
-            background-color: #f8591b;
-            color: #fff;
-            border: 1px solid #f8591b;
-        }
-
-        .btn-primary:hover {
-            background-color: #e64c10;
-            color: #fff;
-            border: 1px solid #e64c10;
-        }
-
-        .btn-primary.focus,
-        .btn-primary:focus {
-            background-color: #e64c10;
-            color: #fff;
-            border: 1px solid #e64c10;
-        }
-
         .space-medium {
             padding-top: 80px;
             padding-bottom: 80px;
@@ -578,14 +634,6 @@
             margin-left: 20px;
             font-family: "FS Albert Extra Bold", Helvetica, Arial, sans-serif;
         }
-
-        .carousel-inner #picture {
-
-            max-height: 440px;
-            width: 80%;
-
-
-        }
     </style>
 </head>
 
@@ -608,15 +656,11 @@
     <body>
         <div class="wholebox">
             <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-            <a className="navbar-brand" href="/">
-                     <img
-                        src="/static/logo.png"
-                        alt="img"
-                        className="img fluid"
-                        style="width: 10vw; height: 5vw;" 
-                     />
-                  </a>
-               
+                <a className="navbar-brand" href="/">
+                    <img src="/static/perconn.png" alt="img" className="img fluid"
+                        style="width: 11.5vw; height: 5vw;" />
+                </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -651,7 +695,6 @@
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <div class="btn">
-
                             {% if user.is_authenticated %}
                             <ul class="navbar-nav mr-2">
                                 <li class="nav-item dropdown">
@@ -666,15 +709,18 @@
                         </div>
                         <!-- Button to  trigger Login modal -->
                         {% else %}
-                        <button type="button" class="btn btn-primary" onClick="parent.location='login'">Login
+                        <button type="button" class="btn btn-primary" onClick="parent.location='login'" style="height: 3.5rem;
+                        width: 8rem;"><p class="loginbutton">Login
                             <a href="/login">
                                 <span class="glyphicon glyphicon-log-in" style="color: cornsilk;"></span>
-                            </a></button>
+                            </a></p>
+                        </button>
 
 
                         <button type="button" class="btn btn-primary"
-                            onClick="parent.location='register'">Sign-up</button>
-                        
+                            onClick="parent.location='register'" style="height: 3.5rem;
+                            width: 8rem;"><p class="loginbutton">Sign-up</p></button>
+
                         {% endif %}
                         <!--<ul class="nav navbar-nav navbar-right">
                                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -772,13 +818,15 @@
                 <p>Go to the top</p>
                 <a class="up-arrow" href="/home" data-toggle="tooltip" title="TO TOP">
                     <span class="glyphicon glyphicon-chevron-up"></span>
-                </a><br><br>
+                </a><br><br><hr>
+                <p style="text-align: center;">&copy; Company 2017-2020</p>
 
                 <div class="row text-center">
                     <div class="col-sm-4">
                         <div class="thumbnail">
-                            <img src="/static/about.png" alt="About us" width="200" height="150">
+                            <img src="/static/about.png" alt="About us" class="footerimage">
                             <p><strong>About Us</strong></p>
+                            <hr>
                             <p>Friday 27 November 2015</p>
                             <button class="btn" data-toggle="modal" data-target="#myModal">Click here to know us
                                 better</button>
@@ -786,8 +834,9 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="thumbnail">
-                            <img src="/static/Contact.jpg" alt="Contact us" width="200" height="150">
+                            <img src="/static/Contact.jpg" alt="Contact us" class="footerimage">
                             <p><strong>Contact Us</strong></p>
+                            <hr>
                             <p>Send a mail :
                                 <a href="#">
                                     <span class="glyphicon glyphicon-send"></span>
@@ -805,7 +854,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="thumbnail">
-                            <img src="/static/follow.webp" alt="San Francisco" width="200" height="150">
+                            <img src="/static/follow.webp" alt="San Francisco" class="footerimage">
                             <p><strong>Follow Us </strong><span class="glyphicon glyphicon-thumbs-up"></span></p>
                             <hr>
                             <a href="#">Instagram</a>
@@ -816,6 +865,7 @@
                                 handles</button>
                         </div>
                     </div>
+                    <p style="text-align: center;">&copy; Company 2017-2020</p>
                 </div>
         </div>
         </div>
