@@ -27,5 +27,7 @@ urlpatterns = [
     path('test/' , views.test , name = 'test'),
     path('mental/' , views.mental , name = 'mental'),
     path('physical/' , views.physical, name = 'physical'),
+    path('inspirational/' , views.inspirational , name = 'inspirational'),
+    path('anxiety/' , views.anxiety, name = 'anxiety'),
 
 ]

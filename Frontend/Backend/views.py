@@ -127,3 +127,9 @@ def mental(request) :
 
 def physical(request) :
     return render(request,"physical.html")
+
+def inspirational(request) :
+    return render(request,"inspirational.html")
+
+def anxiety(request) :
+    return render(request,"anxiety.html")
