@@ -42,7 +42,7 @@
         }
 
         .navbar {
-            min-height: 75px;
+            min-height: 60px;
             font-size: 2rem;
             margin-bottom: 0px;
             background-color: rgb(255, 162, 153);
@@ -51,6 +51,19 @@
         .navbar-brand {
             font-size: 2.25rem;
         }
+@media(min-width: 320) and (max-width: 790){
+    .navbar-brand{
+        float: left;
+        margin: -110px;
+        padding: -100px;}
+        .img{
+            margin: 6px 46px 7px -83px;
+            padding: 6px 46px 7px -83px;
+            float: left;
+            vertical-align: initial;
+        }
+    
+}
 
         /* Center website */
         .main {
@@ -106,9 +119,8 @@
             border: 1px solid #e64c10;
         }
         .loginbutton{
-            font-size: 1.3rem;
+            font-size: 1.288rem;
         }
-
 
 
         .carousel-inner img {
@@ -182,6 +194,7 @@
             border-radius: 2vw;
             background-color: rgb(255, 253, 162);
             font-weight: bold;
+            word-wrap: break-word;
         }
 
         h1 {
@@ -194,6 +207,7 @@
         h4,
         h5 {
             text-align: center;
+            word-wrap: break-word;
         }
 
         h3 {
@@ -634,6 +648,45 @@
             margin-left: 20px;
             font-family: "FS Albert Extra Bold", Helvetica, Arial, sans-serif;
         }
+        /*  slider.....*/
+        .slidercontainer {
+  position: relative;
+  width: 50%;
+}
+
+.sliderimage {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.slidermiddle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.slidercontainer:hover .image {
+  opacity: 0.3;
+}
+
+.slidercontainer:hover .middle {
+  opacity: 1;
+}
+
+.slidertext {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
     </style>
 </head>
 
@@ -656,9 +709,9 @@
     <body>
         <div class="wholebox">
             <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-                <a className="navbar-brand" href="/">
+                <a className="navbar-brand" href="/" >
                     <img src="/static/perconn.png" alt="img" className="img fluid"
-                        style="width: 11.5vw; height: 5vw;" />
+                        style="width: 11.5vw; height: 3.8vw;" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -709,8 +762,8 @@
                         </div>
                         <!-- Button to  trigger Login modal -->
                         {% else %}
-                        <button type="button" class="btn btn-primary" onClick="parent.location='login'" style="height: 3.5rem;
-                        width: 8rem;"><p class="loginbutton">Login
+                        <button type="button" class="btn btn-primary" onClick="parent.location='login'" style="height: 3.45rem;
+                        width: 7rem;"><p class="loginbutton">Login
                             <a href="/login">
                                 <span class="glyphicon glyphicon-log-in" style="color: cornsilk;"></span>
                             </a></p>
@@ -718,8 +771,8 @@
 
 
                         <button type="button" class="btn btn-primary"
-                            onClick="parent.location='register'" style="height: 3.5rem;
-                            width: 8rem;"><p class="loginbutton">Sign-up</p></button>
+                            onClick="parent.location='register'" style="height: 3.45rem;
+                            width: 7rem;"><p class="loginbutton">Sign-up</p></button>
 
                         {% endif %}
                         <!--<ul class="nav navbar-nav navbar-right">
