@@ -125,8 +125,9 @@ def login(request):
         else: 
             return render ( request , 'login.html')
 
+@login_required
 def logout(request):
-    logout(request)
+    auth.logout(request)
     messages.success(request, "Successfully logged out")
     return redirect('/')
 
