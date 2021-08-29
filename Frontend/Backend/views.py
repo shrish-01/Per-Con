@@ -6,6 +6,7 @@ from datetime import datetime
 from django.contrib import messages
 from django.contrib.auth.models import auth , User 
 from django.contrib.auth  import authenticate,  login, logout
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
@@ -14,30 +15,39 @@ def home(request):
 def about(request) :
     return render(request,"about.html")
      
+@login_required(login_url='login')
 def test(request) :
     return render(request,"test.html")
 
+@login_required(login_url='login')
 def contheartbreak(request) :
     return render(request,"contheartbreak.html")
 
+@login_required(login_url='login')
 def emotional(request) :
     return render(request,"emotional.html")
 
+@login_required(login_url='login')
 def envy(request) :
     return render(request,"envy.html")
 
+@login_required(login_url='login')
 def shyness(request) :
     return render(request,"shyness.html")
 
+@login_required(login_url='login')
 def loneliness(request) :
     return render(request,"loneliness.html")
 
+@login_required(login_url='login')
 def copingwithpandemic(request) :
     return render(request,"copingwithpandemic.html")
 
+@login_required(login_url='login')
 def managing(request) :
     return render(request,"managing.html")
 
+@login_required(login_url='login')
 def artofparenting(request) :
     return render(request,"artofparenting.html")
 
@@ -59,47 +69,53 @@ def services(request) :
     return render(request,"services.html")
     
 def register(request):
-    if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        username = request.POST['username']
-        password = request.POST['password']
-        password2 = request.POST['password2']
-
-        if password == password2 :
-            if User.objects.filter(email=email).exists():
-                messages.info(request , 'Email already used')
-                return redirect('register')
-            elif User.objects.filter(username=username).exists():
-                messages.info(request , 'Username Already Used' )
-                return redirect('register')
-            else:
-                user = User.objects.create_user(email=email , username=username ,password=password)
-                user.save();
-                return redirect('/login')
-        else:
-            messages.info(request , 'Password is not same')
-            return redirect('register')
+    if request.user.is_authenticated:
+        return redirect('home')
     else:
-        return render(request , 'register.html')
+        if request.method == 'POST':
+            name = request.POST['name']
+            email = request.POST['email']
+            username = request.POST['username']
+            password = request.POST['password']
+            password2 = request.POST['password2']
+
+            if password == password2 :
+                if User.objects.filter(email=email).exists():
+                    messages.info(request , 'Email already used')
+                    return redirect('register')
+                elif User.objects.filter(username=username).exists():
+                    messages.info(request , 'Username Already Used' )
+                    return redirect('register')
+                else:
+                    user = User.objects.create_user(email=email , username=username ,password=password)
+                    user.save();
+                    return redirect('/login')
+            else:
+                messages.info(request , 'Password is not same')
+                return redirect('register')
+        else:
+                return render(request , 'register.html')
 
 def login(request):
-  if request.method == 'POST':
-           loginusername = request.POST ['loginusername']
-           loginpassword1 = request.POST['loginpassword']
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
+        if request.method == 'POST':
+                loginusername = request.POST ['loginusername']
+                loginpassword1 = request.POST['loginpassword']
 
-           user = auth.authenticate(username=loginusername , password=loginpassword1)
+                user = auth.authenticate(username=loginusername , password=loginpassword1)
 
-           if user is not None:
-                 auth.login(request , user)
-                 messages.success(request,"Successfully loged in")
-                 return redirect('/')
-           else:
-            messages.info(request , 'invalid credentials, please try again')
-            return redirect('login')
-            
-  else: 
-             return render ( request , 'login.html')
+                if user is not None:
+                        auth.login(request , user)
+                        messages.success(request,"Successfully loged in")
+                        return redirect('/')
+                else:
+                    messages.info(request , 'invalid credentials, please try again')
+                    return redirect('login')
+                
+        else: 
+                    return render ( request , 'login.html')
 
 def handelLogout(request):
     logout(request)
