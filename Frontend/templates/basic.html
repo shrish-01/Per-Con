@@ -101,15 +101,17 @@
             font-size: 2.7rem;
             color: black;
         }
-        .contentblock{
+
+        .contentblock {
             padding: 5px 5px;
             margin: 10px 10px;
         }
-        .finalblock{
+
+        .finalblock {
             background-color: rgb(233, 221, 221);
             padding: 10px 10px;
         }
-        
+
 
 
         /* Add padding BETWEEN each column (if you want) */
@@ -604,7 +606,7 @@
     <body>
         <div class="wholebox">
             <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-                <a class="navbar-brand" href="/"style="font-size:big;" >PER-CON</a>
+                <a class="navbar-brand" href="/" style="font-size:big;">PER-CON</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -622,16 +624,16 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/contact">Contact Us <span class="sr-only">(current)</span></a>
                         </li>
-                    
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Fitness Tips
+                                Fitness Tips
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/mental" style="font-size: medium;">Mental Stability</a>
-                                <a class="dropdown-item" href="/physical"style="font-size:medium;">Physical Fitness</a>
-                        
+                                <a class="dropdown-item" href="/physical" style="font-size:medium;">Physical Fitness</a>
+
                         </li>
                         <!--<li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -652,9 +654,8 @@
                                 </li>
                             </ul>
                         </div>
-                        {% else %}
                         <!-- Button to  trigger Login modal -->
-
+                        {% else %}
                         <button type="button" class="btn btn-primary" onClick="parent.location='login'">Login
                             <a href="#">
                                 <span class="glyphicon glyphicon-log-in" style="color: cornsilk;"></span>
@@ -663,16 +664,8 @@
 
                         <button type="button" class="btn btn-primary"
                             onClick="parent.location='register'">Sign-up</button>
+                        
                         {% endif %}
-                        {% for message in messages  %}            
-                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                              <strong>Message : </strong> {{ message }}
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                        {% endfor %}  
-
                         <!--<ul class="nav navbar-nav navbar-right">
                                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                               </ul>
@@ -683,6 +676,14 @@
                 </form>
         </div>
         </nav>
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message : </strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
         <!--Nav ends here-->
 
         <!---->
@@ -697,8 +698,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="/static/balloon.JPG"
-                        alt="Image" class="navimg">
+                    <img src="/static/balloon.JPG" alt="Image" class="navimg">
                     <div class="carousel-caption">
                         <h3>Life is Beautiful...</h3>
                         <p>Happiness</p>
@@ -795,7 +795,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="thumbnail">
-                            <img src="/static/follow.webp"alt="San Francisco" width="200" height="150">
+                            <img src="/static/follow.webp" alt="San Francisco" width="200" height="150">
                             <p><strong>Follow Us </strong><span class="glyphicon glyphicon-thumbs-up"></span></p>
                             <hr>
                             <a href="#">Instagram</a>

@@ -81,6 +81,10 @@ def register(request):
             username = request.POST['username']
             password = request.POST['password']
             password2 = request.POST['password2']
+            
+            if len(username)>10 and len(username)<5:
+                messages.error(request,"Username must be under 10 characters and more than 5characters")
+                return redirect('register')
 
             if password == password2 :
                 if User.objects.filter(email=email).exists():
@@ -107,22 +111,21 @@ def login(request):
     else:
         if request.method == 'POST':
                 loginusername = request.POST ['loginusername']
-                loginpassword1 = request.POST['loginpassword']
+                loginpassword = request.POST['loginpassword']
 
-                user = auth.authenticate(username=loginusername , password=loginpassword1)
+                user = auth.authenticate(username=loginusername , password=loginpassword)
 
                 if user is not None:
-                        auth.login(request , user)
-                        messages.success(request,"Successfully loged in")
+                        login(request , user)
+                        messages.success(request,"Successfully logged in")
                         return redirect('/')
                 else:
                     messages.info(request , 'invalid credentials, please try again')
                     return redirect('login')
-                
         else: 
-                    return render ( request , 'login.html')
+            return render ( request , 'login.html')
 
-def handelLogout(request):
+def logout(request):
     logout(request)
     messages.success(request, "Successfully logged out")
     return redirect('/')
