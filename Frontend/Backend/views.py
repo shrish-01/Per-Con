@@ -75,12 +75,13 @@ def register(request):
         if request.method == 'POST':
             name = request.POST['name']
             email = request.POST['email']
-            country = request.POST['country']
-            gender = request.POST['gender']
-            age = request.POST['age']
             username = request.POST['username']
             password = request.POST['password']
             password2 = request.POST['password2']
+            coun = request.POST['coun']
+            gen = request.POST['gen']
+            a = request.POST['a']
+            
             
             if len(username)>10 and len(username)<5:
                 messages.error(request,"Username must be under 10 characters and more than 5characters")
