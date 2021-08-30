@@ -649,7 +649,7 @@
         .elementcontent {
             font-size: 1.7rem;
             margin-left: 20px;
-            font-family: "FS Albert Extra Bold", Helvetica, Arial, sans-serif;
+            font-family:serif;
         }
 
         /*  slider.....*/
@@ -691,6 +691,11 @@
             font-size: 16px;
             padding: 16px 32px;
         }
+
+        /*.aboutsection{
+            height: 100vw;
+            width: 100%;
+        }*/
     </style>
 </head>
 
@@ -712,10 +717,10 @@
 
     <body>
         <div class="wholebox">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sectionnav ">
                 <a className="navbar-brand" href="/">
                     <img src="/static/perconn.png" alt="img" className="img fluid"
-                        style="width: 11.5vw; height: 3.8vw;" />
+                        style="width: 11.5vw; height: 3.8vw;border:2px solid black;" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -876,7 +881,7 @@
 
                 <footer class="container-fluid text-center">
                     <p>Go to the top</p>
-                    <a class="up-arrow" href="/home" data-toggle="tooltip" title="TO TOP">
+                    <a class="up-arrow" href="/home#sectionnav" data-toggle="tooltip" title="TO TOP">
                         <span class="glyphicon glyphicon-chevron-up"></span>
                     </a><br><br>
                     <hr>
@@ -889,7 +894,7 @@
                                 <p><strong>About Us</strong></p>
                                 <hr>
                                 <p>Friday 27 November 2015</p>
-                                <button class="btn" data-toggle="modal" data-target="#myModal">Click here to know us
+                                <button class="btn" data-toggle="modal" data-target="#myModal"  onClick="parent.location='/about'">Click here to know us
                                     better</button>
                             </div>
                         </div>
@@ -899,13 +904,18 @@
                                 <p><strong>Contact Us</strong></p>
                                 <hr>
                                 <p>Send a mail :
-                                    <a href="#"><span class="glyphicon glyphicon-send"></span></a>
+                                    <a href="/contact#sectionmsg"><span class="glyphicon glyphicon-send"></span></a>
                                     Message :
-                                    <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+                                    <a href="/contact#sectioncontact"><span class="glyphicon glyphicon-envelope"></span></a>
                                     Call us :
-                                    <a href="#"><span class="glyphicon glyphicon-earphone"></span></a>
+                                    <a href="/contact#sectioncontact"><span class="glyphicon glyphicon-earphone"></span></a>
+                                    <script>
+                                        $("/contact").click(function(){
+           // any value you need
+           $(document).scrollTop(600) 
+           });</script>
                                 </p>
-                                <button class="btn" data-toggle="modal" data-target="#myModal">Click here to contact
+                                <button class="btn" data-toggle="modal" data-target="#myModal"  onClick="parent.location='/contact'" >Click here to contact
                                     us</button>
                             </div>
                         </div>
@@ -914,10 +924,10 @@
                                 <img src="/static/follow.webp" alt="San Francisco" class="footerimage" style="height: 18vw;">
                                 <p><strong>Follow Us </strong><span class="glyphicon glyphicon-thumbs-up"></span></p>
                                 <hr><p>
-                                <a href="#">Instagram</a>
-                                <a href="#">Facebook</a>
-                                <a href="#">Twitter</a></p>
-                                <button class="btn" data-toggle="modal" data-target="#myModal">Click here to go on
+                                <a href="https://www.instragram.com/percon21.official/" target="_blank">Instagram</a>
+                                <a href="https://www.Facebook.com/percon21/" target="_blank">Facebook</a>
+                                <a href="https://www.Twitter.com/percon21/" target="_blank">Twitter</a></p>
+                                <button class="btn" data-toggle="modal" data-target="#myModal"  onClick="parent.location='social'">Click here to go on
                                     social
                                     handles</button>
                             </div>
