@@ -1,0 +1,175 @@
+{% extends "basic.html" %}
+{% block title %} About Us{% endblock %}
+
+{% block body %}
+<title>About Us</title>
+
+<div class="aboutsection" style="background-color: rgb(255, 205, 159);">
+    <h1 style="font-size: 4rem;">Per-Con</h1>
+        <img src="/static/logo.png" style="height: 30vw;width: 90%;border: 1px solid black;margin:10px 20px 10px 20px;">
+    <div class="row"style="text-align: center;font-size: 1.4em;">
+        Individual counseling is a one-on-one counseling between a client and a trained
+        therapist, in a safe, caring, and confidential environment. The client expresses whatever comes
+        in his mind. The therapist here knows how to take out more of information from the client by
+        making him comfortable enough to express his thoughts. By doing so, the client is able to identify
+        those aspects of their lives that they would like to change. Thus, it helps them to have a better
+        understanding of themselves and others. After counseling they know what is bothering them, and what
+        ctually want from life. They set personal goals, and start working towards a desired change for a
+        healthier and happier life The client here is told to explore, analyse, and understand their feelings,
+        beliefs, and behaviours. This allows them to identify those aspects of their lives that they would
+        like to change. Thus, it helps them to have a better understanding of themselves and others, and to
+        set personal goals, and to work towards a desired change for a healthier and happier life.<br>
+        <br>Beginning therapy is challenging for some students, especially when attendance is mandatory. However,
+        students can experience transformative change by the end of the process, even if they commence the work in a
+        guarded way.
+
+        Multiple problems can arise in the process of attending therapy as a student, and it can be difficult for a
+        student to know what to do if these challenges are overwhelming.
+
+        Attending personal therapy brings rich learnings which can be applied in clinical work but can also positively
+        impact learning in the course, and lifelong personal development. The process can enhance the student's
+        understanding of what the client may experience in the therapeutic journey.
+    </div>
+    <!-- Mockup Block -->
+    <hr>
+    <div class="container space-bottom-2 space-bottom-md-3">
+        <div class="row align-items-lg-center">
+            <div class="col-lg-5 mb-7 mb-lg-0">
+                <!-- Title -->
+                <div class="pr-lg-4">
+                    <span class="btn btn-icon btn-soft-primary rounded-circle mb-3">
+                        <span class="bigger font-weight-semi-bold btn-icon__inner">01.</span>
+                    </span>
+                    <h3 class="h4 font-weight-semi-bold text-danger">Smart evaluation model</h3>
+                    <p class="mb-0">Sophisticated model providing analysis for the entire blockchain asset ecosystem.
+                        Strategic insights based on research, trends,and 50+ unique indicators to properly evaluate
+                        investment potential and risk.</p>
+                </div>
+                <!-- End Title -->
+            </div>
+
+            <div id="SVGmarketingStrategy" class="col-lg-7 svg-preloader">
+                <!-- SVG Icon -->
+                <figure class="ie-marketing-strategy">
+                    <img class="js-svg-injector" src=".." alt="Image Description" data-parent="#SVGmarketingStrategy">
+                </figure>
+                <!-- End SVG Icon -->
+            </div>
+        </div>
+    </div>
+    <!-- End Mockup Block -->
+
+    <!-- Mockup Block -->
+    <div class="container space-1">
+        <div class="row align-items-lg-center">
+            <div class="col-lg-5 order-lg-2 mb-7 mb-lg-0">
+                <!-- Title -->
+                <div class="pl-lg-4">
+                    <span class="btn btn-icon btn-soft-primary rounded-circle mb-3">
+                        <span class="small font-weight-semi-bold btn-icon__inner">02.</span>
+                    </span>
+                    <h3 class="h4 font-weight-semi-bold text-primary">Safe. Stable. Secure.</h3>
+                    <p class="mb-0">Advanced distributed system architecture built to protect against DDoS and other
+                        potential threats. More than 98% of digital assets stored in multi-signature,cold wallets.
+                        Security protocols are fully aligned and compliant with industry best practices.</p>
+                </div>
+                <!-- End Title -->
+            </div>
+
+            <div id="SVGappDevelopment" class="col-lg-7 order-lg-1 svg-preloader">
+                <!-- SVG Icon -->
+                <figure class="ie-app-development">
+                    <img class="js-svg-injector" src="../../assets/svg/illustrations/app-development.svg"
+                        alt="SVG Illustration" data-parent="#SVGappDevelopment">
+                </figure>
+                <!-- End SVG Icon -->
+            </div>
+        </div>
+    </div>
+    <!-- End Mockup Block -->
+
+    <!-- Mockup Block -->
+    <div class="container space-top-2 space-top-md-3">
+        <div class="row align-items-lg-center">
+            <div class="col-lg-5 mb-7 mb-lg-0">
+                <!-- Title -->
+                <div class="pr-lg-4">
+                    <span class="btn btn-icon btn-soft-primary rounded-circle mb-3">
+                        <span class="small font-weight-semi-bold btn-icon__inner">03.</span>
+                    </span>
+                    <h3 class="h4 font-weight-semi-bold text-primary">Now, zero fees for everyone</h3>
+                    <p class="mb-0">Empowering millions of users, across 130+ countries. Over $1 Billion in assets.
+                        24/7/365 customer access and support. A trusted world-class operation designed specifically for
+                        knowledgeable crypto-investors.</p>
+                </div>
+                <!-- End Title -->
+            </div>
+
+            <div id="SVGbusinessAnalysis" class="col-lg-7 svg-preloader">
+                <!-- SVG Icon -->
+                <figure class="ie-business-analysis">
+                    <img class="js-svg-injector" src="../../assets/svg/illustrations/business-analysis.svg"
+                        alt="SVG Illustration" data-parent="#SVGbusinessAnalysis">
+                </figure>
+                <!-- End SVG Icon -->
+            </div>
+        </div>
+    </div><br><br>
+    <!-- End Mockup Block -->
+
+    <!-- JS Implementing Plugins -->
+    <script src="../../assets/vendor/svg-injector/dist/svg-injector.min.js"></script>
+
+    <!-- JS Front -->
+    <script src="../../assets/js/components/hs.svg-injector.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+        $(window).on('load', function () {
+            // initialization of svg injector module
+            $.HSCore.components.HSSVGIngector.init('.js-svg-injector');
+        });
+    </script>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <h3>WHAT OUR USERS SAY</h3>
+            <div class="carousel-item active">
+                <p style="text-align: center;font-size: large;padding: 3vw 8vw 5vw 8vw;">Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Voluptatibus ratione autem quisquam cupiditate eligendi repudiandae
+                    accusamus fugiat nostrum voluptate id architecto corrupti, tenetur eum necessitatibus nam distinctio
+                    reiciendis! Itaque, sed.</p>
+            </div>
+            <div class="carousel-item">
+                <p class="d-block w-100 h-30" id="img"
+                    style="text-align: center;font-size: large;padding: 3vw 8vw 5vw 8vw;">Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Voluptatibus ratione autem quisquam cupiditate eligendi repudiandae
+                    accusamus fugiat nostrum voluptate id architecto corrupti, tenetur eum necessitatibus nam distinctio
+                    reiciendis! Itaque, sed.</p>
+            </div>
+            <div class="carousel-item">
+                <p class="d-block w-100 h-30" id="img"
+                    style="text-align: center;font-size: large;padding: 3vw 8vw 5vw 8vw;">Lorem ipsum dolor sit amet
+                    consectetur, adipisicing elit. Voluptatibus ratione autem quisquam cupiditate eligendi repudiandae
+                    accusamus fugiat nostrum voluptate id architecto corrupti, tenetur eum necessitatibus nam distinctio
+                    reiciendis! Itaque, sed.</p>
+            </div>
+        </div>
+    
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+</div>
+<br><br>
+{% endblock body %}
