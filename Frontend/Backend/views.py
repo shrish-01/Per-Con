@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from .models import *
 from datetime import datetime
 from django.contrib import messages
-from django.contrib.auth.models import auth , User 
+from django.contrib.auth.models import  User 
 from django.contrib.auth  import authenticate,  login, logout
 from django.contrib.auth.decorators import login_required
 
@@ -106,20 +106,20 @@ def register(request):
         else:
                 return render(request , 'register.html')
 
-def login(request):
-    if request.user.is_authenticated:
-        return redirect('home')
-    else:
+def lin(request):
+    # if request.user.is_authenticated:
+    #     return redirect('home')
+    # else:
         if request.method == 'POST':
                 loginusername = request.POST ['loginusername']
                 loginpassword = request.POST['loginpassword']
 
-                user = auth.authenticate(username=loginusername , password=loginpassword)
+                user = authenticate(request,username=loginusername , password=loginpassword)
 
                 if user is not None:
                         login(request , user)
                         messages.success(request,"Successfully logged in")
-                        return redirect('/')
+                        return redirect('home')
                 else:
                     messages.info(request , 'invalid credentials, please try again')
                     return redirect('login')
@@ -127,8 +127,8 @@ def login(request):
             return render ( request , 'login.html')
 
 @login_required
-def logout(request):
-    auth.logout(request)
+def lout(request):
+    logout(request)
     messages.success(request, "Successfully logged out")
     return redirect('/')
 
