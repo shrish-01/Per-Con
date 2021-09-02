@@ -36,15 +36,15 @@
                             <h4>Login</h4>
                         </div><br>
                         <div class="d-flex flex-column text-center">
-                            <form method="POST" action="/login/">
+                            <form method="POST" action="/lin/">
                                 {% csrf_token %}
                                 <div class="form-group">
-                                    <label for="usr" style="text-align: left;">Username</label>
+                                    <label for="username" style="text-align: left;">Username</label>
                                     <input type="username" class="form-control" id="loginusername" name="loginusername"
                                         placeholder="Enter username...">
                                 </div>
                                 <div class="form-group">
-                                    <label for="usr">Password</label>
+                                    <label for="password">Password</label>
                                     <input type="password" class="form-control" id="loginpassword" name="loginpassword"
                                         placeholder="Your password...">
                                 </div>
