@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.models import  User 
 from django.contrib.auth  import authenticate,  login, logout
 from django.contrib.auth.decorators import login_required
-
+import logging
 
 def home(request):
     return render(request,"index.html")
@@ -107,15 +107,15 @@ def register(request):
                 return render(request , 'register.html')
 
 def lin(request):
-    # if request.user.is_authenticated:
-    #     return redirect('home')
-    # else:
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
         if request.method == 'POST':
                 loginusername = request.POST ['loginusername']
                 loginpassword = request.POST['loginpassword']
 
                 user = authenticate(request,username=loginusername , password=loginpassword)
-
+                print(user)
                 if user is not None:
                         login(request , user)
                         messages.success(request,"Successfully logged in")
@@ -143,3 +143,5 @@ def inspirational(request) :
 
 def anxiety(request) :
     return render(request,"anxiety.html")
+
+    
