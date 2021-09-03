@@ -70,6 +70,34 @@
             }
 
         }
+/*
+        #video {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        #video iframe,
+        #video object,
+        #video embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+        }
+    
+    @media(min-width: 320) and (max-width: 790){
+        #video {
+            position: relative;
+           max-height: 100px;
+           max-width: 100px;
+        }
+
+    }
+*/
 
         /* Center website */
         .main {
@@ -209,6 +237,13 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
+        .heading {
+            font-size: 5rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            word-wrap: break-word;
+        }
+
         h1,
         h3,
         h4,
@@ -238,10 +273,6 @@
             padding: 10px 10px;
             border-radius: 10px;
         }
-
-
-
-
 
 
         /* Create four equal columns that floats next to each other */
@@ -319,7 +350,7 @@
                 font-size: 1.5rem;
             }
         }
-    
+
 
         h1 {
             font-size: 4rem;
@@ -658,10 +689,9 @@
         }
 
         .elementcontent {
-            font-size: 1.7rem;
+            font-size: 2rem;
             margin-left: 20px;
-            font-family: serif;
-            border: 3px solid gray;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             border-top-right-radius: 15px;
             padding: 10px 10px;
             margin-left: 10px;
@@ -670,45 +700,6 @@
             box-shadow: 5px 10px rgb(212, 211, 211);
         }
 
-        /*  slider.....*/
-        .slidercontainer {
-            position: relative;
-            width: 50%;
-        }
-
-        .sliderimage {
-            opacity: 1;
-            display: block;
-            width: 100%;
-            height: auto;
-            transition: .5s ease;
-            backface-visibility: hidden;
-        }
-
-        .slidermiddle {
-            transition: .5s ease;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%)
-        }
-
-        .slidercontainer:hover .image {
-            opacity: 0.3;
-        }
-
-        .slidercontainer:hover .middle {
-            opacity: 1;
-        }
-
-        .slidertext {
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            padding: 16px 32px;
-        }
 
         /*.aboutsection{
             height: 100vw;
@@ -731,7 +722,6 @@
         .iconfooter {
             padding: 0vw 0.5vw 0vw 1vw;
         }
-    
     </style>
 </head>
 
@@ -807,12 +797,10 @@
                         </div>
                         <!-- Button to  trigger Login modal -->
                         {% else %}
-                        <button type="button"  class="btn btn-primary" onClick="parent.location='lin'" style="height: 3.45rem;
+                        <button type="button" class="btn btn-primary" onClick="parent.location='lin'" style="height: 3.45rem;
                         width: 7rem;">
                             <p class="loginbutton">Login
-                            
-                                    <span class="glyphicon glyphicon-log-in" style="color: cornsilk;"></span>
-                                
+                                <span class="glyphicon glyphicon-log-in" style="color: cornsilk;"></span>
                             </p>
                         </button>
 
@@ -821,8 +809,8 @@
                             <p class="loginbutton">Sign-up</p>
                         </button>
                         {% endif %}
-                       
-                       
+
+
                 </div>
                 </form>
 
@@ -907,10 +895,9 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>-->
-                
-                <h1>Per-Con</h1>
-                <hr>
 
+                <p class="heading">Per-Con</p>
+                <hr>
                 <h1>"Every moment is a fresh begining"</h1><br>
                 <br><br>
 
