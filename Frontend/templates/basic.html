@@ -70,7 +70,8 @@
             }
 
         }
-/*
+
+        /*
         #video {
             position: relative;
             padding-bottom: 56.25%;
@@ -281,6 +282,15 @@
             width: 50%;
         }
 
+        .content {
+            transition: box-shadow .7s;
+            border: 1px solid #ccc;
+            float: left;
+        }
+
+        .content:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
 
         /* Content */
         .content {
@@ -696,7 +706,8 @@
             padding: 10px 10px;
             margin-left: 10px;
             margin-right: 15px;
-            background: linear-gradient(90deg, #00C9FF -90%, #92FE9D 100%);
+            background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+            ;
             box-shadow: 5px 10px rgb(212, 211, 211);
         }
 
@@ -721,6 +732,48 @@
 
         .iconfooter {
             padding: 0vw 0.5vw 0vw 1vw;
+        }
+
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
+
+        .nav-item {
+            display: block;
+            position: relative;
+            padding: 0.2em 0;
+        }
+
+        .nav-item:hover {
+            font-weight: 400;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.1em;
+            background-color: hotpink;
+            opacity: 0;
+            transition: opacity 300ms, transform 300ms;
+        }
+
+        .nav-item:hover::after,
+        .nav-item:focus::after {
+            opacity: 1;
+            transform: translate3d(0, 0.2em, 0);
+        }
+
+        /* Scale from center */
+        li:nth-child(3) a::after {
+            opacity: 1;
+            transform: scale(0);
+            transform-origin: center;
+        }
+
+        li:nth-child(3) a:hover::after,
+        li:nth-child(3) a:focus::after {
+            transform: scale(1);
         }
     </style>
 </head>
