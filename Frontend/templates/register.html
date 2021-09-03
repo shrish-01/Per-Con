@@ -44,7 +44,7 @@ h5{
 {% for message in messages %}
 <h5>{{message}}</h5>
 {% endfor%}
-                            <form method="POST" action="/signup/">
+                            <form method="POST" action="/lin/">
                             {% csrf_token %}
                                 <div class="form-group">
                                     <label for="name">Full Name</label>
@@ -107,7 +107,7 @@ h5{
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-info btn-block btn-round"
-                                   formaction ="/register/">Sign-up</button>
+                                   formaction ="/lin">Sign-up</button>
                             </form>
                             <br>
                             <div class="text-center text-muted delimiter">or Sign-up with</div>
