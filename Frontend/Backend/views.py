@@ -107,9 +107,9 @@ def register(request):
                 return render(request , 'register.html')
 
 def lin(request):
-    if request.user.is_authenticated:
-        return redirect('home')
-    else:
+    # if request.user.is_authenticated:
+    #     return redirect('home')
+    # else:
         if request.method == 'POST':
                 loginusername = request.POST ['loginusername']
                 loginpassword = request.POST['loginpassword']
@@ -121,7 +121,7 @@ def lin(request):
                         messages.success(request,"Successfully logged in")
                         return redirect('home')
                 else:
-                    messages.info(request , 'invalid credentials, please try again')
+                    messages.error(request , 'invalid credentials, please try again')
                     return redirect('login')
         else: 
             return render ( request , 'login.html')
