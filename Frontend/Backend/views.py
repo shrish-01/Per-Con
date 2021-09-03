@@ -99,7 +99,7 @@ def register(request):
                     user.name = name 
                     user.save();
                     messages.success(request,"Your account has been succesfully created !!!")
-                    return redirect('/login')
+                    return redirect('/lin')
             else:
                 messages.info(request , 'Password is not same, try again !!!')
                 return redirect('register')
@@ -107,9 +107,7 @@ def register(request):
                 return render(request , 'register.html')
 
 def lin(request):
-    # if request.user.is_authenticated:
-    #     return redirect('home')
-    # else:
+    
         if request.method == 'POST':
                 loginusername = request.POST ['loginusername']
                 loginpassword = request.POST['loginpassword']
