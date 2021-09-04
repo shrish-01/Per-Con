@@ -262,7 +262,35 @@
 
         .jumbotron {
             border-radius: 20px;
+            box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
         }
+        
+
+        @media (prefers-reduced-motion: no-preference) {
+  .jumbotron {
+    animation-name: wipe-enter;
+    animation-duration: 1s;
+    animation-iteration-count:inherit;
+  }
+}
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+@media (prefers-reduced-motion: no-preference) {
+  .jumbotron {
+    animation: wipe-enter 1s infinite;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .jumbotron-animation {
+    animation: wipe-enter 2s 1;
+  }
+}
        
         .contentblock {
             padding: 5px 5px;
@@ -842,13 +870,55 @@
     width: 100%;
     margin: 0px 0px 30px 0px;
   }
-  .subject .header .date,
+  .subject .header .date,finalblock subject,
   .subject .header .category {
     width: 100%;
     margin-bottom: 10px;
     text-align: center;
   }
 }
+
+.bounce-up .finalblock subject {
+            opacity: 0;
+            -moz-transition: all 700ms ease-out;
+            -webkit-transition: all 700ms ease-out;
+            -o-transition: all 700ms ease-out;
+            transition: all 700ms ease-out;
+            -moz-transform: translate3d(0px, 200px, 0px);
+            -webkit-transform: translate3d(0px, 200px, 0px);
+            -o-transform: translate(0px, 200px);
+            -ms-transform: translate(0px, 200px);
+            transform: translate3d(0px, 200, 0px);
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .animation-element .finalblock,.jumbotron{
+            position: relative;
+            width: 100%;
+            margin: 0% 1.33 2.66% 1.33%;
+        }
+
+        .bounce-up.in-view .finalblock subject {
+            opacity: 1;
+            -moz-transform: translate3d(0px, 0px, 0px);
+            -webkit-transform: translate3d(0px, 0px, 0px);
+            -o-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+        }
+
+        .finalblock subject {
+
+            background: #F5F5F5;
+            box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+            border: solid 1px #EAEAEA;
+        }
+
+        .finalblock subject:hover,
+        .finalblock subject:active {
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+        }
     </style>
 </head>
 
@@ -1212,6 +1282,55 @@ function topFunction() {
 
             $window.on('scroll resize', check_if_in_view);
             $window.trigger('scroll');
+
+            window.addEventListener('scroll', function() {
+  console.log("Scrollin'");
+});
+var scroll = window.requestAnimationFrame ||
+            function(callback){ window.setTimeout(callback, 1000/60)};
+            function loop() {
+
+elementsToShow.forEach(function (element) {
+  if (isElementInViewport(element)) {
+    element.classList.add('is-visible');
+  } else {
+    element.classList.remove('is-visible');
+  }
+});
+
+scroll(loop);
+}
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+
+const callback = function(entries) {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("is-visible");
+  });
+};
+
+const observer = new IntersectionObserver(callback);
+
+const targets = document.querySelectorAll(".show-on-scroll");
+targets.forEach(function(target) {
+  observer.observe(target);
+});
         </script>
     </body>
 
