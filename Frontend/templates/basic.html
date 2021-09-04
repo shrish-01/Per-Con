@@ -775,6 +775,80 @@
         li:nth-child(3) a:focus::after {
             transform: scale(1);
         }
+
+        .cf:before,
+        .cf:after {
+            content: " ";
+            display: table;
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        .animation-element {
+            position: relative;
+            width: 50%;
+            margin: 0% 1.33 2.66% 1.33%;
+        }
+
+        /*bounce up animation for the subject*/
+
+        .bounce-up .subject {
+            opacity: 0;
+            -moz-transition: all 700ms ease-out;
+            -webkit-transition: all 700ms ease-out;
+            -o-transition: all 700ms ease-out;
+            transition: all 700ms ease-out;
+            -moz-transform: translate3d(0px, 200px, 0px);
+            -webkit-transform: translate3d(0px, 200px, 0px);
+            -o-transform: translate(0px, 200px);
+            -ms-transform: translate(0px, 200px);
+            transform: translate3d(0px, 200, 0px);
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .bounce-up.in-view .subject {
+            opacity: 1;
+            -moz-transform: translate3d(0px, 0px, 0px);
+            -webkit-transform: translate3d(0px, 0px, 0px);
+            -o-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+        }
+
+        .subject {
+
+            background: #F5F5F5;
+            box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+            border: solid 1px #EAEAEA;
+        }
+
+        .subject:hover,
+        .subject:active {
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+        }
+        
+@media screen and (max-width: 678px) {
+  .main-container {
+    margin: 20px 15px;
+  }
+  .animation-element,
+  .animation-element:nth-of-type(3n-1),
+  .animation-element:nth-of-type(3n-2),
+  .animation-element:nth-of-type(3n-0) {
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+  }
+  .subject .header .date,
+  .subject .header .category {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
     </style>
 </head>
 
@@ -980,7 +1054,7 @@
                             <div class="thumbnail">
                                 <img src="/static/Contact.jpg" alt="Contact us" class="footerimage"
                                     style="height: 18vw;">
-                                <p><strong>Contact Us</strong></p>
+                                <p><strong>Contact Us <i class="fa fa-comment"></i></strong></p>
                                 <hr>
                                 <p>Send a mail :
                                     <a href="/contact#sectionmsg"><span class="glyphicon glyphicon-send"></span></a>
@@ -1111,6 +1185,34 @@ function topFunction() {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+        <script>
+            var $animation_elements = $('.animation-element');
+            var $window = $(window);
+
+            function check_if_in_view() {
+                var window_height = $window.height();
+                var window_top_position = $window.scrollTop();
+                var window_bottom_position = (window_top_position + window_height);
+
+                $.each($animation_elements, function () {
+                    var $element = $(this);
+                    var element_height = $element.outerHeight();
+                    var element_top_position = $element.offset().top;
+                    var element_bottom_position = (element_top_position + element_height);
+
+                    //check to see if this current container is within viewport
+                    if ((element_bottom_position >= window_top_position) &&
+                        (element_top_position <= window_bottom_position)) {
+                        $element.addClass('in-view');
+                    } else {
+                        $element.removeClass('in-view');
+                    }
+                });
+            }
+
+            $window.on('scroll resize', check_if_in_view);
+            $window.trigger('scroll');
+        </script>
     </body>
 
     </html>
