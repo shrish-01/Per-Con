@@ -33,49 +33,50 @@
                     <div class="modal-body">
                         <div class="form-title text-center">
                             <h4>Sign-up</h4>
+                            <img src="/static/perconn.png" alt="img" className="img fluid" style="height: 8vw; width: 17vw;">
                         </div><br>
                         <div class="d-flex flex-column text-center">
-                        <style>
-h5{
-    color: red;
-    
-}
-</style>
-{% for message in messages %}
-<h5>{{message}}</h5>
-{% endfor%}
+                            <style>
+                                h5 {
+                                    color: red;
+                                }
+                            </style>
+                            {% for message in messages %}
+                            <h5>{{message}}</h5>
+                            {% endfor%}
                             <form method="POST" action="/register/">
-                            {% csrf_token %}
+                                {% csrf_token %}
                                 <div class="form-group">
                                     <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name"
-                                       name="name" placeholder="Enter Full Name...">
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Enter Full Name...">
                                 </div>
-                               
+
                                 <div class="form-group">
                                     <label for="email">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                        placeholder="Enter email">
-                                    <small id="email" class="form-text text-muted">We'll never share your email with anyone
+                                    <input type="email" name="email" class="form-control" id="email"
+                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="email" class="form-text text-muted">We'll never share your email with
+                                        anyone
                                         else.</small>
                                 </div>
                                 <div class="form-group">
                                     <label for="username">Username</label>
-                                    <input type="text" name="username" class="form-control" id="username" name = 'username'
-                                        placeholder="Enter username...">
+                                    <input type="text" name="username" class="form-control" id="username"
+                                        name='username' placeholder="Enter username...">
                                 </div>
                                 <div class="form-group">
                                     <label for="password2">Password</label>
-                                    <input type="password" name="password" class="form-control" id="password" name = 'password'
-                                        placeholder="Your password...">
+                                    <input type="password" name="password" class="form-control" id="password"
+                                        name='password' placeholder="Your password...">
                                 </div>
                                 <div class="form-group">
                                     <label for="password2">Confirm Password</label>
-                                    <input type="password"  name="password2" class="form-control" id="password2" name = 'password2'
-                                        placeholder="Confirm password...">
+                                    <input type="password" name="password2" class="form-control" id="password2"
+                                        name='password2' placeholder="Confirm password...">
                                 </div>
                                 <div class="form-row ">
-                                    <div class="form-group col-md-2">
+                                    <div class="form-group col-md-4">
                                         <label for="coun">Country</label>
                                         <select id="coun" name="coun" class="form-control">
                                             <option selected>Choose...</option>
@@ -85,7 +86,7 @@ h5{
                                             <option>Japan</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-2">
+                                    <div class="form-group col-md-4">
                                         <label for="gen">Gender</label>
                                         <select id="gen" name="gen" class="form-control">
                                             <option selected>Choose...</option>
@@ -94,7 +95,7 @@ h5{
                                             <option>Other</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-2">
+                                    <div class="form-group col-md-4">
                                         <label for="a">Age</label>
                                         <select id="a" name="a" class="form-control">
                                             <option selected>Choose...</option>
@@ -107,14 +108,15 @@ h5{
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-info btn-block btn-round"
-                            formaction="/register/">Sign-up</button>
+                                    formaction="/register/">Sign-up</button>
                             </form>
                             <br>
                             <div class="text-center text-muted delimiter">or Sign-up with</div>
                             <p><a href="#">Google</a>
                                 <a href="#">Facebook</a>
                                 <a href="#">Twitter</a>
-                            </p></p>
+                            </p>
+                            </p>
                         </div>
                     </div>
                 </div>

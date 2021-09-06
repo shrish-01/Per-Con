@@ -989,8 +989,8 @@
         }
         @media (min-width:1439px) and (max-width: 2565px){
             .wrapper {
-                top: 116%;
-                margin-top: 0%;
+                margin-top: auto;
+                z-index: -1;
             }
         }
 
@@ -1017,7 +1017,7 @@ h4{
             width: 40%;
             transform: translate(-50%, -50%);
             background-image: linear-gradient(to right, rgba(111, 211, 199, 0.14), #6fd3c7, rgba(111, 211, 199, 0.14));
-            padding: 12%;
+            padding: 10%;
         }
 
         /* End of Global Styling  */
@@ -1363,8 +1363,7 @@ h4{
         <div class="wholebox">
             <nav class="navbar navbar-expand-lg navbar-light " id="sectionnav ">
                 <a className="navbar-brand" href="/">
-                    <img src="/static/perconn.png" alt="img" className="img fluid"  class="symbolicon"
-                        >
+                    <img src="/static/perconn.png" alt="img" className="img fluid"  class="symbolicon">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -1376,13 +1375,13 @@ h4{
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/" style="animation-delay: 0s;">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="/about">About Us <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/about"  style="animation-delay: 0.4s;">About Us <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="/contact">Contact Us <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/contact"  style="animation-delay: 0.8s;">Contact Us <span class="sr-only">(current)</span></a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -1456,16 +1455,16 @@ h4{
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="/static/balloon.JPG" alt="Image" class="navimg">
                         <div class="carousel-caption">
                             <h3>Life is Beautiful...</h3>
                             <p>Happiness</p>
                         </div>
+                        <img src="/static/balloon.JPG" alt="Image" class="navimg" style="height: 60vw;">
                     </div>
 
                     <div class="item">
                         <img src="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://cf-images.us-east-1.prod.boltdns.net/v1/static/507936866/1a9242d6-e5fe-45ae-aae3-2c38c3934dfd/bd43d1a4-2888-463c-9491-afb747e2a9fe/1280x720/match/image.jpg&w=1280&h=720&q=90&c=cc"
-                            alt="Image" class="navimg">
+                            alt="Image" class="navimg" style="height: 60vw;">
                         <div class="carousel-caption">
                             <h3>Life is Beautiful...</h3>
                             <p>Happiness</p>
@@ -1474,7 +1473,7 @@ h4{
 
                     <div class="item">
                         <img src="https://www.theladders.com/wp-content/uploads/happy_190405.jpg" alt="Image"
-                            class="navimg">
+                            class="navimg" style="height: 60vw;">
                         <div class="carousel-caption">
                             <h3 style="font-size: 5rem;color: rgb(61, 178, 255);"><i>“You learn more from failure
                                     than
@@ -1485,7 +1484,7 @@ h4{
 
                     <div class="item">
                         <img src="https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2019-07/toxic_positivity_dr._konstantin_lukin_lukin_center_for_psychotherapy_nj.jpg?itok=5Oa0AEHM"
-                            alt="Image" class="navimg">
+                            alt="Image" class="navimg" style="height: 60vw;">
                         <div class="carousel-caption">
                             <h3 style="font-size: 3rem;color: rgb(255, 36, 66);font-weight: 1000;"><i>“It’s not
                                     whether
