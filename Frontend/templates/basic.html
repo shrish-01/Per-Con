@@ -931,7 +931,7 @@
             box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
         }
 
-/*
+        /*
         .flip-box {
   background-color: transparent;
   border: 1px solid #f1f1f1;
@@ -967,6 +967,352 @@
   background-color: dodgerblue;
   transform: rotateX(180deg);
 }*/
+
+        @media(min-width:320px) and (max-width: 430px) {
+            .wrapper {
+                top: 52%;
+            }
+        }
+
+        @media (min-width:760px) and (max-width: 770px){
+            .wrapper {
+                top: 152%;
+            }
+        }
+        @media (min-width:1020px) and (max-width: 1438px){
+            .wrapper {
+                top: 99%;
+            }
+        }
+        @media (min-width:1439px) and (max-width: 2565px){
+            .wrapper {
+                top: 116%;
+                margin-top: 0%;
+            }
+        }
+
+        .newcontent {
+            background-color: #6fd3c7;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%2365cbbd' fill-opacity='0.77'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            cursor: pointer;
+        }
+
+        /*
+h4{
+ text-align: center; 
+  font-family: monospace;
+  cursor: pointer;
+  color:#fff;
+  position:fixed;
+  bottom:5px;
+  right:5px;
+}
+*/
+        .wrapper {
+            position: absolute;
+            left: 50%;
+            width: 40%;
+            transform: translate(-50%, -50%);
+            background-image: linear-gradient(to right, rgba(111, 211, 199, 0.14), #6fd3c7, rgba(111, 211, 199, 0.14));
+            padding: 12%;
+        }
+
+        /* End of Global Styling  */
+
+
+
+
+        /* Words , id for holder class, for its path  */
+        #Do {
+            stroke: #FEF202;
+            fill: #FEF202;
+            stroke-dasharray: 600;
+            opacity: 1;
+            animation: yellow 3s cubic-bezier(0, 0.23, 1, .1);
+            animation-delay: 0s;
+            -moz-animation: yellow 3s cubic-bezier(0, 0.23, 1, .1);
+            -webkit-animation: yellow 3s cubic-bezier(0, 0.23, 1, .1);
+        }
+
+        #Something,
+        .Something {
+            fill: #fff;
+            stroke-dasharray: 400;
+            stroke: #fff;
+            opacity: 0;
+            animation: white 4s cubic-bezier(0, 0.23, 1, .1);
+            -moz-animation: white 4s cubic-bezier(0, 0.23, 1, .1);
+            -webkit-animation: white 4s cubic-bezier(0, 0.23, 1, .1);
+            animation-delay: 0.4s;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+        }
+
+        #Creative,
+        .Creative {
+            fill: #FEF202;
+            stroke-dasharray: 600;
+            stroke: #FEF202;
+            opacity: 0;
+            animation: yellow 5s cubic-bezier(0, 0.23, 1, .1);
+            -moz-animation: yellow 5s cubic-bezier(0, 0.23, 1, .1);
+            -webkit-animation: yellow 5s cubic-bezier(0, 0.23, 1, .1);
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+
+
+        #EveryDay,
+        .EveryLetters {
+            fill: #6FD3C7;
+            stroke-dasharray: 600;
+            stroke: #6FD3C7;
+            opacity: 0;
+            animation: green 4s cubic-bezier(0, 0.23, 1, .1);
+            -moz-animation: green 4s cubic-bezier(0, 0.23, 1, .1);
+            -webkit-animation: green 4s cubic-bezier(0, 0.23, 1, .1);
+            animation-delay: 2s;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+        }
+
+
+
+
+        /* backgrounds, holdrs and borders  */
+
+        .EveryDayandBackground {
+            fill: #fff;
+            opacity: 0;
+            animation: everydayBK 4s cubic-bezier(0, 0.23, 1, .1);
+            -moz-animation: everydayBK 4s cubic-bezier(0, 0.23, 1, .1);
+            -webkit-animation: everydayBK 4s cubic-bezier(0, 0.23, 1, .1);
+            animation-delay: 2s;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            stroke-dasharray: 850;
+            stroke: #fff;
+        }
+
+
+        #LeftDotsAndLines,
+        #RightDotsAndLines {
+            fill: #fff;
+            stroke-dasharray: 60;
+            stroke: #fff;
+            opacity: 0;
+            animation: lines 5s cubic-bezier(0, 0.23, 1, .1);
+            -moz-animation: lines 5s cubic-bezier(0, 0.23, 1, .1);
+            -webkit-animation: lines 5s cubic-bezier(0, 0.23, 1, .1);
+            animation-delay: 2s;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+        }
+
+        #Border {
+            fill: #FEF202;
+            stroke-dasharray: 1400;
+            opacity: 0;
+            stroke: #FEF202;
+            animation: Border 3s cubic-bezier(0, 0.23, 1, .1);
+            -moz-animation: Border 3s cubic-bezier(0, 0.23, 1, .1);
+            -webkit-animation: Border 3s cubic-bezier(0, 0.23, 1, .1);
+            animation-delay: 2s;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+        }
+
+        #QuotationLeft,
+        #QuotationRight {
+            fill: #9BF5E9;
+            stroke-dasharray: 40;
+            opacity: 0;
+            stroke: #9BF5E9;
+            animation: Quotation 3s cubic-bezier(0, 0.23, 1, .1);
+            -moz-animation: Quotation 3s cubic-bezier(0, 0.23, 1, .1);
+            -webkit-animation: Quotation 3s cubic-bezier(0, 0.23, 1, .1);
+            animation-delay: 3s;
+            -webkit-animation-fill-mode: forwards;
+            -moz-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+        }
+
+
+
+        /* ainmations  */
+        @keyframes Quotation {
+            0% {
+                opacity: 0;
+                fill: none;
+                stroke-dashoffset: 40;
+            }
+
+            50% {
+                opacity: 10;
+                fill: none;
+                stroke-dashoffset: 40;
+            }
+
+            50% {
+                fill: rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                opacity: 10;
+                fill: #9BF5E9;
+                stroke-dashoffset: 0;
+            }
+        }
+
+
+        @keyframes yellow {
+            0% {
+                opacity: 0;
+                fill: none;
+                stroke-dashoffset: 600;
+            }
+
+            50% {
+                opacity: 10;
+                fill: none;
+                stroke-dashoffset: 600;
+            }
+
+            50% {
+                fill: rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                opacity: 10;
+                fill: #FEF202;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes Border {
+            0% {
+                opacity: 0;
+                fill: none;
+                stroke-dashoffset: 1400;
+            }
+
+            50% {
+                opacity: 10;
+                fill: none;
+                stroke-dashoffset: 1400;
+            }
+
+            50% {
+                fill: rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                opacity: 10;
+                fill: #FEF202;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes green {
+            0% {
+                opacity: 0;
+                fill: none;
+                stroke-dashoffset: 600;
+            }
+
+            50% {
+                opacity: 10;
+                fill: none;
+                stroke-dashoffset: 600;
+            }
+
+            50% {
+                fill: rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                opacity: 10;
+                fill: #6FD3C7;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes everydayBK {
+            0% {
+                opacity: 0;
+                fill: none;
+                stroke-dashoffset: 850;
+            }
+
+            50% {
+                opacity: 10;
+                fill: none;
+                stroke-dashoffset: 850;
+            }
+
+            50% {
+                fill: rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                opacity: 10;
+                fill: #fff;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes white {
+            0% {
+                opacity: 0;
+                fill: none;
+                stroke-dashoffset: 400;
+            }
+
+            50% {
+                opacity: 10;
+                fill: none;
+                stroke-dashoffset: 400;
+            }
+
+            50% {
+                fill: rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                opacity: 10;
+                fill: #fff;
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes lines {
+            0% {
+                opacity: 0;
+                fill: none;
+                stroke-dashoffset: 60;
+            }
+
+            50% {
+                opacity: 10;
+                fill: none;
+                stroke-dashoffset: 60;
+            }
+
+            50% {
+                fill: rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                opacity: 10;
+                fill: #fff;
+                stroke-dashoffset: 0;
+            }
+        }
     </style>
 </head>
 
@@ -1135,7 +1481,7 @@
 
             <br>
             <hr>
-            <div class="main" >
+            <div class="main">
                 <!--card....
       <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
