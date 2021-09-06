@@ -55,6 +55,7 @@
             font-size: 2.4rem;
             font-weight: 400;
         }
+        
 
         @media(min-width: 320) and (max-width: 790) {
             .navbar-brand {
@@ -739,7 +740,9 @@
             padding: 10px 10px;
             margin-left: 10px;
             margin-right: 15px;
-            background: linear-gradient(90deg, #00d2ff 0%, rgb(61, 178, 255));
+            color: white;
+            background-color: #ff194fec;
+           /* background: linear-gradient(90deg, #00d2ff 0%, rgb(61, 178, 255));*/
             box-shadow: 5px 10px rgb(212, 211, 211);
         }
 
@@ -1313,6 +1316,30 @@ h4{
                 stroke-dashoffset: 0;
             }
         }
+
+        @media (min-width:320px) and (max-width: 455px) {
+            .img{
+                height: 20%;
+            }
+            
+        }
+        .symbolicon{
+            width: 11.5vw; height: 3.8vw;border:2px solid black;
+        }
+        @media (min-width:320px) and (max-width: 455px) {
+            .symbolicon{
+                width: 20.5vw; height: 10vw;
+                margin-left: -145px;
+            }
+            .navbar-toggler{
+                margin-right: 10px;
+            }
+        }
+        @media (min-width: 768px){
+.navbar-collapse.collapse {
+    display: none;
+}}
+
     </style>
 </head>
 
@@ -1336,13 +1363,13 @@ h4{
         <div class="wholebox">
             <nav class="navbar navbar-expand-lg navbar-light " id="sectionnav ">
                 <a className="navbar-brand" href="/">
-                    <img src="/static/perconn.png" alt="img" className="img fluid"
-                        style="width: 11.5vw; height: 3.8vw;border:2px solid black;" />
+                    <img src="/static/perconn.png" alt="img" className="img fluid"  class="symbolicon"
+                        >
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    aria-label="Toggle navigation" style=" margin-right: -138px;">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
