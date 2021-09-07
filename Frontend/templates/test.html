@@ -340,13 +340,16 @@
 
 
 
-            if (m <= 40) {
+            if (m < 40) {
                 document.write('You are not suffering from depression ')
             }
-            if (m <= 60 & m >= 40) {
+            if (m <60 & m >= 40) {
+                document.write('You are suffering from mild depression .Do not take tension.Follow some tips from this website that will surely help you.')
+            }
+            if (m <= 70 & m >= 60) {
                 document.write('You are suffering from moderate depression .Do not take tension.Follow some tips from this website that will surely help you.')
             }
-            if (m >= 60) {
+            if (m >= 70) {
                 document.write('There is chance that you are suffering from sever depression. Do not take tension.Follow some tips from this website that will surely help you also Take some professional help')
             }
 
