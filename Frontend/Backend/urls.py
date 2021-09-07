@@ -1,6 +1,9 @@
 from django.contrib import admin
 from django.urls import path
 from Backend import views
+
+
+
 urlpatterns = [
     path("",views.home, name='home') ,
     path("home/",views.home, name='home') ,
@@ -29,5 +32,5 @@ urlpatterns = [
     path('physical/' , views.physical, name = 'physical'),
     path('inspirational/' , views.inspirational , name = 'inspirational'),
     path('anxiety/' , views.anxiety, name = 'anxiety'),
-
+    
 ]
