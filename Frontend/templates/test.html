@@ -21,6 +21,10 @@
         title{
             background-color: blueviolet;
         }
+        .result{
+            background-color: blueviolet;
+
+        }
     </style>
 
 </head>
@@ -197,8 +201,8 @@
         <button type="button" name="" value="submit" id="button" onclick="check() "
             class="btn btn-success btn-lg ">Submit</button>
     </form>
-    <p id="result"></p>
-    <script>function check() {
+    <p id="result">
+        <script>function check() {
             var c = 0;
             var q1 = document.test.q1.value;
             var q2 = document.test.q2.value;
@@ -330,6 +334,7 @@
 
             var m = c * 5;
             test.style.display="none";
+            
             document.getElementById('result').textContent=`Your test score =${m}` 
             
 
@@ -360,6 +365,14 @@
 
         }
     </script>
+
+
+    </p>
+    
+
+    
+    
+    
 
 
 
