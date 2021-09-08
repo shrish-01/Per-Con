@@ -215,6 +215,8 @@
             var q13 = document.test.q13.value;
             var q14 = document.test.q14.value;
             var q15 = document.test.q15.value;
+            var result = document.getElementById('result');
+            var quiz=document.getElementById('quiz');
             // var q16 = document.test.q16.value;
             // var q17 = document.test.q17.value;
             // var q18 = document.test.q18.value;
@@ -326,14 +328,15 @@
             // if (q20 == "3") { c += 0.75 }
             // if (q20 == "4") { c += 1.00 }
 
-
-
             var m = c * 5;
+            test.style.display="none";
+            document.getElementById('result').textContent=`Your test score =${m}` 
+            
 
-            document.write("Your test score is = ")
-            document.write(m);
-            document.write("/75")
-            document.write("\n")
+            // document.write("Your test score is = ")
+            // document.write(m);
+            // document.write("/75")
+            // document.write("\n")
 
 
 
@@ -341,16 +344,16 @@
 
 
             if (m < 40) {
-                document.write('You are not suffering from depression ')
+                document.getElementById('result').textContent=`Your test score =${c}. You are not suffering from depression` 
             }
             if (m <60 & m >= 40) {
-                document.write('You are suffering from mild depression .Do not take tension.Follow some tips from this website that will surely help you.')
+                document.getElementById('result').textContent=`Your test score =${c}. You are suffering from mild depression. Do not take tension.Follow some tips from this website that will surely help you.` 
             }
             if (m <= 70 & m >= 60) {
-                document.write('You are suffering from moderate depression .Do not take tension.Follow some tips from this website that will surely help you.')
+                document.getElementById('result').textContent=`Your test score =${c}.You are suffering from moderate depression. Do not take tension.Follow some tips from this website that will surely help you.` 
             }
             if (m >= 70) {
-                document.write('There is chance that you are suffering from sever depression. Do not take tension.Follow some tips from this website that will surely help you also Take some professional help')
+                document.getElementById('result').textContent=`Your test score =${c}.There is chance that you are suffering from sever depression. Do not take tension.Follow some tips from this website that will surely help you also Take some professional help` 
             }
 
 
