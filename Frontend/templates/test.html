@@ -43,8 +43,11 @@
 
 <body>
     <div class="question">
-
-        <div style="text-align: center;font-size: 5vw;font-family: serif;"> Test section</div>
+        <div class="row">
+            <div class="col">
+<img src="https://image.freepik.com/free-vector/exams-concept-illustration_114360-1655.jpg" style="height: 15vw;width: 35vw;"></div>
+        <div class="col" style="text-align: center;font-size: 5vw;font-family: serif;"> Test section</div>
+    </div>
     </div>
 
 
@@ -178,7 +181,7 @@
 
         <button type="button" name="" value="submit" id="button" onclick="check() "
             class="btn btn-success btn-lg ">Submit</button>
-    </form>
+    </form><br>
     <p id="result" class="jumbotron jumbotron-animation animation-element bounce-up cf">
 
     <div class="finalblock subject">
@@ -201,15 +204,7 @@
                 var q15 = document.test.q15.value;
                 var result = document.getElementById('result');
                 var quiz = document.getElementById('quiz');
-                // var q16 = document.test.q16.value;
-                // var q17 = document.test.q17.value;
-                // var q18 = document.test.q18.value;
-                // var q19 = document.test.q19.value;
-                // var q20 = document.test.q20.value;
-                // var result= document.getElelementById('result');
-
-
-
+               
 
 
                 if (q1 == "1") { c += 0.25 }
