@@ -1484,11 +1484,17 @@ h4{
                 width: 10vw;
             }
         }
-        #contacticon{
+
+        #contacticon {
             padding: 10px;
         }
+       
+        @media (min-width:320px) and (max-width: 455px) {
+            .contacticon {
+            padding: 15px;
+        }  
+        }
 
-        
     </style>
 </head>
 
@@ -1691,7 +1697,8 @@ h4{
                                 <img src="/static/about.png" alt="About us" class="footerimage">
                                 <p style="font-size: 1.2rem;"><strong>About Us</strong></p>
                                 <hr>
-                                <p>We are at your service...</p><br>
+                                <p>We are at your service...
+                                    <i class="fa fa-heart" aria-hidden="true"style='font-size:20px;color: red;'></i></p><br>
                                 <button class="btn" data-toggle="modal" data-target="#myModal"
                                     onClick="parent.location='/about'">Click here to know us
                                     better</button>
@@ -1706,25 +1713,29 @@ h4{
                                 </p>
                                 <hr>
                                 <p id="contacticon">
-                                    <a href="/contact#sectioncontact" style="padding: 30px;margin-bottom: 2px;" target="_blank">
-                                        <span class="glyphicon iconify" data-icon="mdi:gmail" data-width="25" style="color: red;"></span>
+                                    <a class="contacticon" href="/contact#sectioncontact" style="padding: 20px;"
+                                        target="_blank">
+                                        <span class="glyphicon iconify" data-icon="mdi:gmail" data-width="28"
+                                            style="color: red;"></span>
                                     </a>
-                                    <a href="/contact#sectioncontact"  style="padding: 30px;font-size: 20px;"target="_blank"><span
-                                            class="glyphicon glyphicon-envelope" data-width="25" style="color: #fecb2e;"></span>
+                                    <a class="contacticon" href="/contact#sectioncontact" style="padding: 20px;"
+                                        target="_blank"><span class="iconify" data-width="25" data-icon="mdi:message"
+                                         style="color: #fecb2e;"></span>
                                     </a>
-                                    <a href="/contact#sectioncontact" style="padding: 30px;font-size: 20px;" target="_blank">
-                                        <span class="glyphicon glyphicon-earphone" ></span></a>
-                                </p>
-
-                                <script>
-                                    $("/contact").click(function () {
-                                        // any value you need
-                                        $(document).scrollTop(600)
-                                    });</script>
+                                    <a class="contacticon" href="/contact#sectioncontact" style="padding: 20px;"
+                                        target="_blank">
+                                        <span class="iconify" data-icon="mdi:phone" data-width="25" style="color: #2da2e1;"></span>
+                                    </a>
+                                
                                 </p>
                                 <button class="btn" data-toggle="modal" data-target="#myModal"
                                     onClick="parent.location='/contact'">Click here to contact
                                     us</button>
+                                    <script>
+                                        $("/contact").click(function () {
+                                            // any value you need
+                                            $(document).scrollTop(600)
+                                        });</script>
                             </div>
                         </div>
 
